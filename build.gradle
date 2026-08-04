@@ -149,6 +149,9 @@ dependencies {
     compileOnly "maven.modrinth:jade:26.2.8+neoforge"
     localRuntime "maven.modrinth:jade:26.2.8+neoforge"
 
+    // Mixin annotation processor (Fase 3) — same pattern as teleport_animation/neoforge/26.2.
+    annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
+
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
@@ -193,6 +196,7 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+    options.compilerArgs.add('-Amixin.outrefmap=' + project.layout.buildDirectory.get().file('classes/java/main/ascendant_spawners.refmap.json'))
 }
 
 // IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
