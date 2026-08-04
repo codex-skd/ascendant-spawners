@@ -88,4 +88,11 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 
 ## Estado
 
-Ninguna fase iniciada. Próximo paso: **Fase 0** (decompilar + confirmar Hwyla/Jade y AT).
+**Fase 0 — HECHA** (decompilación + investigación + documentación).
+
+- Decompilado `lib_ext/ApothicSpawners-26.1.2-2.0.1.jar` con VineFlower a `temp/apothic-spawners-src/` (no versionado): 32 clases `.java` bajo `dev/shadowsoffire/apothic_spawners/`.
+- **Hwyla vs Jade: JADE.** `SpawnerHwylaPlugin.java` (nombre legado) integra contra el fork activo: imports `snownee.jade.api.IWailaPlugin`, `snownee.jade.api.WailaPlugin`, `snownee.jade.api.IWailaCommonRegistration` / `IWailaClientRegistration`, con `@WailaPlugin` sobre el plugin y registros `registerBlockDataProvider` / `registerBlockComponent` de Jade. `SpawnerClientProvider` y `SpawnerServerDataProvider` implementan `IBlockComponentProvider` e `IServerDataProvider<BlockAccessor>` de Jade. No queda integración con el Hwyla/WAILA discontinuado. Se renombra a `SpawnerJadePlugin` en el port (ver `docs/ASCENDANT_SPAWNERS_RENAME_MAP.md`).
+- **Access Transformer: SIGUE SIENDO NECESARIO contra 26.2, sin cambios.** Verificado con `javap` contra `minecraft_26.2_client.jar`: todos los miembros listados en `META-INF/accesstransformer.cfg` del JAR original siguen `private` en MC 26.2 — `SpawnerBlockEntity.spawner` (`private final`), y en `BaseSpawner`: `spawnDelay`, `spawnPotentials`, `nextSpawnData`, `spin`, `oSpin`, `minSpawnDelay`, `maxSpawnDelay`, `spawnCount`, `maxNearbyEntities`, `requiredPlayerRange`, `spawnRange` (todos `private`), además de `getOrCreateNextSpawnData` e `isNearPlayer` (`private`).
+- Mapping de renombrado definitivo documentado en `docs/ASCENDANT_SPAWNERS_RENAME_MAP.md` (32 clases top-level + 6 tipos internos).
+
+Próximo paso: **Fase 1** (núcleo: entrypoint, config, registro de objetos, eventos — raíz, 5 clases + payload interno).
