@@ -99,4 +99,12 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 - Adaptaciones 26.2 aplicadas: reflexión estándar en vez de `ObfuscationReflectionHelper`, lookups de registros por `BuiltInRegistries.*.getValue(...)` (se eliminaron las constantes `BlockEntityType.MOB_SPAWNER`/`EntityType.PIG`), paquetes de advancements reubicados (`net.minecraft.advancements.predicates[.entity]`, `net.minecraft.advancements.triggers`), `LootContextParams`/`LootContextParamSets` bajo `net.minecraft.world.level.storage.loot.parameters`, `BlockBehaviour` bajo `net.minecraft.world.level.block.state`.
 - Quedan fuera: `compat` (JEI + Jade, 6 clases), `mixin` (3 clases), arte y QA de paridad.
 
-Próximo paso: **Fase 2** (compat opcional: JEI + Jade).
+**Fase 2 — HECHA** (compat opcional: JEI + Jade).
+
+- 5 clases de `compat/` portadas 1:1 a `src/main/java/com/skd/ascendantspawners/compat/` (renombradas según el mapping): `SpawnerCategory`, `SpawnerJEIPlugin`, `SpawnerClientProvider`, `SpawnerServerDataProvider` y `SpawnerHwylaPlugin` → `SpawnerJadePlugin`.
+- `SpawnerRecipeCache` (adelantada en la Fase 1) intacta.
+- `./gradlew.bat compileJava` en verde (release `v0.0.0-beta.3`).
+- Verificado contra las APIs reales resueltas por gradle (JEI `30.16.0.124`, Jade `26.2.8+neoforge`): las firmas del decompilado coinciden, incluido `IRecipeCategory.draw(... GuiGraphicsExtractor ...)`, `ITooltipBuilder`, `IBlockComponentProvider`/`IServerDataProvider` de Jade y `level.holder(...)` vía `ILevelReaderExtension` de NeoForge. Único ajuste de compilación: import de `IRecipeCategory` en `SpawnerJEIPlugin`.
+- Quedan fuera: `mixin` (3 clases), arte y QA de paridad. Las claves de traducción que referencian las clases de compat (`title.*`, `misc.*`, `info.*`) aún no están en `en_us.json` (pendiente junto al resto de contenido data-driven).
+
+Próximo paso: **Fase 3** (mixins).
