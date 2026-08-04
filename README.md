@@ -6,7 +6,7 @@ Ascendant Spawners is a Minecraft 26.2 (NeoForge) mod.
 
 ## Status
 
-Currently in early development (`0.0.0-beta.1`). Not yet feature complete.
+Core gameplay is ported and functional (`0.0.0-beta.5`): silk-touching spawners, spawner stat modification recipes, JEI/Jade compat, advancements, loot table, enchantment. Remaining work: QA pass for functional parity with the original, and final art (current textures are placeholders).
 
 ## Requirements
 
@@ -16,12 +16,14 @@ Currently in early development (`0.0.0-beta.1`). Not yet feature complete.
 | NeoForge | 26.2.0.32-beta |
 | Java | 21+ |
 | Common Toolkit | required |
-| Ascendant Equipment | required |
+| Ascendant Equipment | optional for now — required once it ships a build |
+| JEI | optional |
+| Jade | optional |
 
 ## Installation
 
 1. Install [NeoForge](https://neoforge.net/) for Minecraft 26.2.
-2. Install Common Toolkit and Ascendant Equipment.
+2. Install Common Toolkit.
 3. Download the mod jar and place it in your `mods/` folder.
 
 ## License
