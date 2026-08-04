@@ -438,5 +438,75 @@
     "mtime": 1785850904.7539573,
     "ast_hash": "fb9e53de04dac12aee64b40a47fe4333",
     "semantic_hash": "fb9e53de04dac12aee64b40a47fe4333"
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785805293.6996808,
+    "ast_hash": "590c4fe707dc338f72f2f11ec0465b89",
+    "semantic_hash": ""
+  },
+  ".gitlab-ci.yml": {
+    "mtime": 1785801080.192414,
+    "ast_hash": "402e112fb0a27fd876291ce11aac8792",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1785851785.8810797,
+    "ast_hash": "72e8fcbec34a6ba8642c7a74396b3b4a",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785852346.800029,
+    "ast_hash": "ae8a97a1059b157064042f6d70916a1a",
+    "semantic_hash": ""
+  },
+  "docs/ASCENDANT_SPAWNERS_RENAME_MAP.md": {
+    "mtime": 1785842242.0622127,
+    "ast_hash": "01d5675f0388c8e098d82924cc95d3be",
+    "semantic_hash": ""
+  },
+  "docs/ROADMAP_ASCENDANT_SPAWNERS.md": {
+    "mtime": 1785851804.9261642,
+    "ast_hash": "0943c8a3d3048877ee29eab62a6e3246",
+    "semantic_hash": ""
+  },
+  "docs/WORKFLOW_ASCENDANT_SPAWNERS_26-2.md": {
+    "mtime": 1785805592.2086115,
+    "ast_hash": "b71c9e1e7a3e3792e1f600617411cc30",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description.md": {
+    "mtime": 1785805605.900704,
+    "ast_hash": "c0fb409156b28f15305a5ff18ad0b786",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_vars.md": {
+    "mtime": 1785807676.236877,
+    "ast_hash": "a262a5831499d3637e6fe92cad903e24",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1.md": {
+    "mtime": 1785807684.0548959,
+    "ast_hash": "6baa1b1661fe9626a7a3f84621439426",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.5.md": {
+    "mtime": 1785852387.0507073,
+    "ast_hash": "5c12a5dff42a51684130ef14dbe97f55",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/ascendant_spawners/icon.png": {
+    "mtime": 1785807648.193439,
+    "ast_hash": "82ed73207792c71ecfa8b60f31aae323",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/ascendant_spawners/textures/gui/advancements/backgrounds/apoth.png": {
+    "mtime": 1785850993.5814402,
+    "ast_hash": "33db46b4619e3bee641e9ab644bb3c2a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/ascendant_spawners/textures/gui/spawner_jei.png": {
+    "mtime": 1785850993.580304,
+    "ast_hash": "277258b07402976ee736abc5cfbfc49e",
+    "semantic_hash": ""
   }
 }
