@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_chain"
+                }
+            ],
+            "rolls": {
+                "type": "minecraft:uniform",
+                "max": 64.0,
+                "min": 48.0
+            }
+        }
+    ],
+    "random_sequence": "ascendant_spawners:gameplay/unstable_spawner"
+}

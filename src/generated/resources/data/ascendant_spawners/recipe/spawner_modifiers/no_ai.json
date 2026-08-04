@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:chorus_fruit",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:no_ai",
+            "mode": "set",
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:conduit",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:ignore_conditions",
+            "mode": "set",
+            "value": true
+        }
+    ]
+}

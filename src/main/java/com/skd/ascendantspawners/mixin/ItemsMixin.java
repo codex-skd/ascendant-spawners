@@ -15,7 +15,9 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(value = Items.class, remap = false)
 public class ItemsMixin {
-   private static final ResourceKey<Item> SPAWNER_KEY = ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("spawner"));
+   // Not a static final field: mixin-merged static fields are appended to the END of the target's
+   // <clinit>, but Items.<clinit> registers "spawner" very early in its own body — so a field would
+   // still be null at that point. Compute the key inline on each call instead.
 
    @ModifyVariable(
       method = "registerItem(Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;Lnet/minecraft/world/item/Item$Properties;)Lnet/minecraft/world/item/Item;",
@@ -26,7 +28,7 @@ public class ItemsMixin {
    private static Function<Properties, Item> asc_replaceSpawnerFactory(
       Function<Properties, Item> factory, ResourceKey<Item> key, Function<Properties, Item> factory2, Properties props
    ) {
-      return SPAWNER_KEY.equals(key)
+      return ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("spawner")).equals(key)
          ? p -> new SpawnerItem(Blocks.SPAWNER, p)
          : factory;
    }

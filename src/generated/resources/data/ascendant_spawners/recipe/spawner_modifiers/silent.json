@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "#minecraft:wool",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:silent",
+            "mode": "set",
+            "value": true
+        }
+    ]
+}
