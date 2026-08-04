@@ -1,4 +1,4 @@
-﻿package com.skd.ascendantspawners;
+package com.skd.ascendantspawners;
 
 import java.util.List;
 import java.util.Set;
