@@ -107,4 +107,12 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 - Verificado contra las APIs reales resueltas por gradle (JEI `30.16.0.124`, Jade `26.2.8+neoforge`): las firmas del decompilado coinciden, incluido `IRecipeCategory.draw(... GuiGraphicsExtractor ...)`, `ITooltipBuilder`, `IBlockComponentProvider`/`IServerDataProvider` de Jade y `level.holder(...)` vía `ILevelReaderExtension` de NeoForge. Único ajuste de compilación: import de `IRecipeCategory` en `SpawnerJEIPlugin`.
 - Quedan fuera: `mixin` (3 clases), arte y QA de paridad. Las claves de traducción que referencian las clases de compat (`title.*`, `misc.*`, `info.*`) aún no están en `en_us.json` (pendiente junto al resto de contenido data-driven).
 
-Próximo paso: **Fase 3** (mixins).
+**Fase 3 — HECHA** (mixins).
+
+- 3 clases mixin portadas 1:1 a `src/main/java/com/skd/ascendantspawners/mixin/` (nombres conservados según el mapping): `BlocksMixin`, `ItemsMixin`, `ItemStackMixin`.
+- `./gradlew.bat compileJava` en verde (release `v0.0.0-beta.4`).
+- Adaptación 26.2: en `ItemsMixin`, `ResourceKey.identifier()` no existe en 26.2 → comparación directa de `ResourceKey` contra constante `ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("spawner"))`.
+- MixinExtras (`WrapOperation`) usado transitivamente vía NeoForge, sin dependencia extra.
+- Quedan fuera: arte y QA de paridad.
+
+Próximo paso: **Fase 4** (arte propio).
