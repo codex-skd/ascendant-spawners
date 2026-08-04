@@ -1,5 +1,12 @@
 # Changelog — Ascendant Spawners
 
+## 0.0.0-beta.3
+
+- Port Fase 2: compat opcional JEI + Jade portado 1:1 desde ApothicSpawners (26.1.2) a 26.2.
+- `compat` (5): `SpawnerCategory` (categoría de recetas JEI), `SpawnerJEIPlugin` (`@JeiPlugin` + catalysts), `SpawnerClientProvider` (tooltip cliente Jade), `SpawnerServerDataProvider` (datos servidor→cliente Jade), `SpawnerHwylaPlugin` → **`SpawnerJadePlugin`** (`@WailaPlugin`, renombrado porque integra contra Jade).
+- `./gradlew.bat compileJava` en verde.
+- Nota: las claves de traducción que referencian las nuevas clases (`title.*`, `misc.*`, `info.*` de `AscendantSpawners.lang`) aún no están portadas a `en_us.json`; quedan pendientes junto al resto del contenido data-driven.
+
 ## 0.0.0-beta.2
 
 - Port Fase 1: núcleo funcional completo portado 1:1 desde ApothicSpawners (26.1.2) a 26.2.
