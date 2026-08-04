@@ -32,6 +32,25 @@ repositories {
     flatDir {
         dir('libs')
     }
+
+    // JEI
+    maven {
+        name = "BlameJared"
+        url = "https://maven.blamejared.com"
+    }
+
+    // Jade (via Modrinth's Maven proxy — Jade has no dedicated maven repo)
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 base {
@@ -121,12 +140,14 @@ dependencies {
     // Not yet added: Ascendant Equipment has no build output yet (still template scaffold).
     // Add once it produces a JAR: implementation files("libs/ascendant_equipment-26.2-neoforge-<version>.jar")
 
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    // JEI — optional compat (Fase 2). API for compile time, full artifact only at runtime (not published as a dependency).
+    compileOnly "mezz.jei:jei-26.2-common-api:30.16.0.124"
+    compileOnly "mezz.jei:jei-26.2-neoforge-api:30.16.0.124"
+    localRuntime "mezz.jei:jei-26.2-neoforge:30.16.0.124"
+
+    // Jade — optional compat (Fase 2). Main artifact contains the API; compileOnly + localRuntime, same pattern as JEI.
+    compileOnly "maven.modrinth:jade:26.2.8+neoforge"
+    localRuntime "maven.modrinth:jade:26.2.8+neoforge"
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
