@@ -68,16 +68,13 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 | Fase | Alcance | Clases origen | Depende de |
 |---|---|---|---|
 | **0** | Setup: decompilar jar a `temp/apothic-spawners-src/`, confirmar estado de Hwyla vs Jade y del AT, definir mapping final en `docs/ASCENDANT_SPAWNERS_RENAME_MAP.md` | — | — |
-| **1** | Núcleo: entrypoint, config, registro de objetos, eventos | raíz (5 clases + payload interno) | Fase 0 |
-| **2** | Stats del spawner: framework de stats configurables | `stats` (7) | Fase 1 |
-| **3** | Modificadores: sistema de recetas que aplican stats (silk touch, no_ai, ignore_light, redstone_control, etc.) | `modifiers` (3) | Fase 2 |
-| **4** | Bloque/Item/Tile del spawner modificado (núcleo funcional visible en juego) | `block` (5) | Fase 2, 3 |
-| **5** | Datagen: loot table, recetas, encantamiento Capturing, tags | `data` (4) + JSONs de `data/apothic_spawners/` | Fase 3, 4 |
-| **6** | Advancements propios (14 criterios/triggers) | `advancements` (3) + JSONs | Fase 4, 5 |
-| **7** | Compat opcional: JEI + Hwyla/Jade (según lo que confirme la Fase 0) | `compat` (6) | Fase 3, 4 |
-| **8** | Mixins (al final: tocan clases vanilla, lo más frágil entre versiones de MC) | `mixin` (3) | Todas las anteriores relevantes |
-| **9** | Arte propio: sustituir texturas de GUI/JEI y fondo de advancement por versiones propias | — (todo `assets/`) | Trabajo paralelo, no bloquea el resto |
-| **10** | QA de paridad funcional + integración real con Ascendant Equipment (una vez tenga build) | — | Todas |
+| **1** | **Núcleo funcional completo** (fusiona las fases 1-6 originales): entrypoint, config, registro de objetos, eventos, stats, modificadores, bloque/item/tile, datagen y advancements. Ver nota abajo sobre por qué van juntas. | raíz (5) + `stats` (7) + `modifiers` (3) + `block` (5) + `data` (4) + `advancements` (3) = 27 clases | Fase 0 |
+| **2** | Compat opcional: JEI + Jade (confirmado en Fase 0, ver `docs/ASCENDANT_SPAWNERS_RENAME_MAP.md`) | `compat` (6) | Fase 1 |
+| **3** | Mixins (al final: tocan clases vanilla, lo más frágil entre versiones de MC) | `mixin` (3) | Fase 1, 2 |
+| **4** | Arte propio: sustituir texturas de GUI/JEI y fondo de advancement por versiones propias | — (todo `assets/`) | Trabajo paralelo, no bloquea el resto |
+| **5** | QA de paridad funcional + integración real con Ascendant Equipment (una vez tenga build) | — | Todas |
+
+> **Nota (post Fase 0)**: el plan original tenía las fases 1-6 como paquetes independientes compilando uno a uno. Al revisar los imports internos del decompilado se confirmó que `root`/`stats`/`modifiers`/`block`/`data`/`advancements` se referencian circularmente entre sí (p.ej. `stats` usa `block.ApothSpawnerTile`, `block` usa `ASConfig`/`modifiers`/`stats`, `modifiers` usa `block`/`compat`/`stats`) — no hay un orden lineal donde cada paquete compile por separado. Se fusionan en una sola Fase 1 (27 de las 32 clases, ~2.400 de las 2.774 líneas totales). `compat` y `mixin` sí son genuinamente separables (solo dependen del núcleo ya cerrado), así que quedan como fases propias.
 
 ## Cómo se alimenta a OpenCode
 
@@ -95,4 +92,11 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 - **Access Transformer: SIGUE SIENDO NECESARIO contra 26.2, sin cambios.** Verificado con `javap` contra `minecraft_26.2_client.jar`: todos los miembros listados en `META-INF/accesstransformer.cfg` del JAR original siguen `private` en MC 26.2 — `SpawnerBlockEntity.spawner` (`private final`), y en `BaseSpawner`: `spawnDelay`, `spawnPotentials`, `nextSpawnData`, `spin`, `oSpin`, `minSpawnDelay`, `maxSpawnDelay`, `spawnCount`, `maxNearbyEntities`, `requiredPlayerRange`, `spawnRange` (todos `private`), además de `getOrCreateNextSpawnData` e `isNearPlayer` (`private`).
 - Mapping de renombrado definitivo documentado en `docs/ASCENDANT_SPAWNERS_RENAME_MAP.md` (32 clases top-level + 6 tipos internos).
 
-Próximo paso: **Fase 1** (núcleo: entrypoint, config, registro de objetos, eventos — raíz, 5 clases + payload interno).
+**Fase 1 — HECHA** (núcleo funcional: root + stats + modifiers + block + data + advancements).
+
+- 27 de las 32 clases portadas 1:1 a `src/main/java/com/skd/ascendantspawners/` (renombradas según el mapping), más `compat/SpawnerRecipeCache.java` (dependencia interna de `SpawnerModifier`, adelantada de la Fase 2).
+- `./gradlew.bat compileJava` en verde (release `v0.0.0-beta.2`).
+- Adaptaciones 26.2 aplicadas: reflexión estándar en vez de `ObfuscationReflectionHelper`, lookups de registros por `BuiltInRegistries.*.getValue(...)` (se eliminaron las constantes `BlockEntityType.MOB_SPAWNER`/`EntityType.PIG`), paquetes de advancements reubicados (`net.minecraft.advancements.predicates[.entity]`, `net.minecraft.advancements.triggers`), `LootContextParams`/`LootContextParamSets` bajo `net.minecraft.world.level.storage.loot.parameters`, `BlockBehaviour` bajo `net.minecraft.world.level.block.state`.
+- Quedan fuera: `compat` (JEI + Jade, 6 clases), `mixin` (3 clases), arte y QA de paridad.
+
+Próximo paso: **Fase 2** (compat opcional: JEI + Jade).

@@ -1,117 +1,87 @@
 package com.skd.ascendantspawners;
 
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
+import com.skd.ascendantspawners.block.SpawnerTile;
+import com.skd.ascendantspawners.data.ASEnchantmentProvider;
+import com.skd.ascendantspawners.data.ASLootProvider;
+import com.skd.ascendantspawners.data.ASRecipeProvider;
+import com.skd.ascendantspawners.stats.SpawnerStats;
+import com.skd.commontoolkit.datagen.DataGenBuilder;
+import com.skd.commontoolkit.network.PayloadHelper;
+import com.skd.commontoolkit.tabs.TabFillingRegistry;
+import java.lang.reflect.Field;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.DataProvider;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.data.event.GatherDataEvent.Client;
+import net.neoforged.neoforge.registries.NewRegistryEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AscendantSpawners.MODID)
 public class AscendantSpawners {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "ascendant_spawners";
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "ascendant_spawners" namespace
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "ascendant_spawners" namespace
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "ascendant_spawners" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    public static final Logger LOGGER = LoggerFactory.getLogger("Ascendant : Spawner");
 
-    // Creates a new Block with the id "ascendant_spawners:example_block", combining the namespace and path
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", p -> p.mapColor(MapColor.STONE));
-    // Creates a new BlockItem with the id "ascendant_spawners:example_block", combining the namespace and path
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
-
-    // Creates a new food item with the id "ascendant_spawners:example_id", nutrition 1 and saturation 2
-    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", p -> p.food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
-
-    // Creates a creative tab with the id "ascendant_spawners:example_tab" for the example item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.ascendant_spawners")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
-
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public AscendantSpawners(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (AscendantSpawners) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    public AscendantSpawners(IEventBus bus) {
+        bus.register(this);
+        AscSpObjects.bootstrap(bus);
+        NeoForge.EVENT_BUS.register(new AscSpEvents());
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
-        }
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+    public void setup(FMLCommonSetupEvent e) {
+        e.enqueueWork(() -> {
+            replaceMobSpawnerFactory();
+            AscSpConfig.load();
+            TabFillingRegistry.registerSimple(Items.SPAWNER, new ResourceKey[] { CreativeModeTabs.TOOLS_AND_UTILITIES });
+            PayloadHelper.registerPayload(new AscSpConfig.ConfigPayload.Provider());
+        });
+    }
+
+    @SubscribeEvent
+    public void regs(NewRegistryEvent e) {
+        e.register(SpawnerStats.REGISTRY);
+    }
+
+    @SubscribeEvent
+    public void data(Client event) {
+        DataProvider.INDENT_WIDTH.set(4);
+        DataGenBuilder.create(new String[] { AscendantSpawners.MODID })
+            .registry(Registries.ENCHANTMENT, ASEnchantmentProvider::bootstrap)
+            .provider(ASRecipeProvider::new)
+            .provider(ASLootProvider::create)
+            .build(event);
+    }
+
+    public static Identifier loc(String path) {
+        return Identifier.fromNamespaceAndPath(AscendantSpawners.MODID, path);
+    }
+
+    public static MutableComponent lang(String type, String path, Object... args) {
+        return Component.translatable(type + ".ascendant_spawners." + path, args);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void replaceMobSpawnerFactory() {
+        try {
+            Field f = BlockEntityType.class.getDeclaredField("factory");
+            f.setAccessible(true);
+            f.set(BuiltInRegistries.BLOCK_ENTITY_TYPE.getValue(Identifier.withDefaultNamespace("mob_spawner")), (BlockEntityType.BlockEntitySupplier<SpawnerTile>) SpawnerTile::new);
+        }
+        catch (ReflectiveOperationException ex) {
+            throw new RuntimeException("Failed to replace the MobSpawner BlockEntityType factory!", ex);
+        }
     }
 }
