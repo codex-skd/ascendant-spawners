@@ -1,0 +1,13 @@
+﻿{
+  "itemGroup.ascendant_spawners": "Example Mod Tab",
+  "block.ascendant_spawners.example_block": "Example Block",
+  "item.ascendant_spawners.example_item": "Example Item",
+
+  "ascendant_spawners.configuration.title": "Ascendant Spawners Configs",
+  "ascendant_spawners.configuration.section.ascendant_spawners.common.toml": "Ascendant Spawners Configs",
+  "ascendant_spawners.configuration.section.ascendant_spawners.common.toml.title": "Ascendant Spawners Configs",
+  "ascendant_spawners.configuration.items": "Item List",
+  "ascendant_spawners.configuration.logDirtBlock": "Log Dirt Block",
+  "ascendant_spawners.configuration.magicNumberIntroduction": "Magic Number Text",
+  "ascendant_spawners.configuration.magicNumber": "Magic Number"
+}
