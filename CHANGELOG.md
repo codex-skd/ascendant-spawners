@@ -1,5 +1,12 @@
 # Changelog — Ascendant Spawners
 
+## 0.0.0-beta.4
+
+- Port Fase 3: mixins portados 1:1 desde ApothicSpawners (26.1.2) a 26.2.
+- `mixin` (3): `BlocksMixin` (reemplaza la factoría de `Blocks.SPAWNER` por `SpawnerBlock`), `ItemsMixin` (reemplaza la factoría de `Items.SPAWNER` por `SpawnerItem`), `ItemStackMixin` (suprime el tooltip vanilla de data components en ítems `SpawnerItem`).
+- Adaptación 26.2: `ResourceKey.identifier()` → comparación por igualdad de `ResourceKey` con una constante creada vía `ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("spawner"))`.
+- `./gradlew.bat compileJava` en verde.
+
 ## 0.0.0-beta.3
 
 - Port Fase 2: compat opcional JEI + Jade portado 1:1 desde ApothicSpawners (26.1.2) a 26.2.
