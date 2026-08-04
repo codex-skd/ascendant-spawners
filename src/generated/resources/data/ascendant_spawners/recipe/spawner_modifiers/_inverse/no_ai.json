@@ -1,0 +1,12 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:chorus_fruit",
+    "offhand": "minecraft:quartz",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:no_ai",
+            "mode": "set",
+            "value": false
+        }
+    ]
+}

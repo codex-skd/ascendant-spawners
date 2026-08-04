@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:prismarine_crystals",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:req_player_range",
+            "max": 48,
+            "value": 4
+        }
+    ]
+}

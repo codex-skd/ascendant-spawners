@@ -1,0 +1,12 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:golden_dandelion",
+    "offhand": "minecraft:quartz",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:youthful",
+            "mode": "set",
+            "value": false
+        }
+    ]
+}

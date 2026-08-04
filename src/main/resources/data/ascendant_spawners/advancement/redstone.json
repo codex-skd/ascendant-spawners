@@ -1,0 +1,29 @@
+{
+    "parent": "ascendant_spawners:modifier",
+    "display": {
+        "icon": {
+            "id": "minecraft:comparator"
+        },
+        "title": {
+            "translate": "advancements.ascendant_spawners.redstone"
+        },
+        "description": {
+            "translate": "advancements.ascendant_spawners.redstone.desc"
+        },
+        "frame": "goal"
+    },
+    "criteria": {
+        "modifier": {
+            "trigger": "ascendant_spawners:spawner_modifier",
+            "conditions": {
+                "redstone_control": true
+            }
+        }
+    },
+    "requirements": [
+        [
+            "modifier"
+        ]
+    ],
+    "sends_telemetry_event": true
+}

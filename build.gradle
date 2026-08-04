@@ -141,9 +141,12 @@ dependencies {
     // Add once it produces a JAR: implementation files("libs/ascendant_equipment-26.2-neoforge-<version>.jar")
 
     // JEI — optional compat (Fase 2). API for compile time, full artifact only at runtime (not published as a dependency).
-    compileOnly "mezz.jei:jei-26.2-common-api:30.16.0.124"
-    compileOnly "mezz.jei:jei-26.2-neoforge-api:30.16.0.124"
-    localRuntime "mezz.jei:jei-26.2-neoforge:30.16.0.124"
+    // Pinned to 30.15.0.121, not the newest 30.16.x — those require neoforge >= 26.2.0.40-beta,
+    // and this project stays on 26.2.0.32-beta (never bump NeoForge without asking). 30.15.0.121
+    // only needs neoforge >= 26.2.0.16-beta (verified against its neoforge.mods.toml).
+    compileOnly "mezz.jei:jei-26.2-common-api:30.15.0.121"
+    compileOnly "mezz.jei:jei-26.2-neoforge-api:30.15.0.121"
+    localRuntime "mezz.jei:jei-26.2-neoforge:30.15.0.121"
 
     // Jade — optional compat (Fase 2). Main artifact contains the API; compileOnly + localRuntime, same pattern as JEI.
     compileOnly "maven.modrinth:jade:26.2.8+neoforge"

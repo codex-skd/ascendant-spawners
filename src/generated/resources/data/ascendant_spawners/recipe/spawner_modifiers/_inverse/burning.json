@@ -1,0 +1,12 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:campfire",
+    "offhand": "minecraft:quartz",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:burning",
+            "mode": "set",
+            "value": false
+        }
+    ]
+}

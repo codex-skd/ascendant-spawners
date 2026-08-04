@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:sugar",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:min_delay",
+            "min": 20,
+            "value": -10
+        }
+    ]
+}

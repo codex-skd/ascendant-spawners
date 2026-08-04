@@ -1,5 +1,23 @@
 # Changelog — Ascendant Spawners
 
+## 0.0.0-beta.5
+
+- Port Fase 4: contenido data-driven y arte propio (cierra lo dejado fuera deliberadamente en la Fase 1).
+- `en_us.json` reemplazado por el contenido real traducido (namespace `ascendant_spawners`), incluidas las claves de compat pendientes desde la Fase 2.
+- 14 JSON de advancement portados a `data/ascendant_spawners/advancement/` (namespace, trigger id y ruta de fondo actualizados).
+- Tags estáticas portadas: `data/ascendant_spawners/tags/entity_type/blacklisted_from_spawners.json`, `data/minecraft/tags/enchantment/non_treasure.json`.
+- `./gradlew.bat runData` genera correctamente el encantamiento `capturing`, la loot table `unstable_spawner` y las 32 recetas de `spawner_modifiers` (16 + 16 `_inverse`) desde los providers ya portados.
+- 2 texturas placeholder propias: `textures/gui/spawner_jei.png` (256×256) y `textures/gui/advancements/backgrounds/apoth.png` (64×64).
+- **Bugs de infraestructura encontrados y corregidos** (arrastrados del scaffold inicial, nunca detectados porque las fases 1-3 solo corrían `compileJava`, no `build`/`runData` completos):
+  - `generateModMetadata` leía de `src/main/templates`, pero la plantilla real estaba en `src/main/resources/templates` — `neoforge.mods.toml` nunca se generaba de verdad. Movida la plantilla a la ruta correcta.
+  - `versionRange="[0.0.0,)"` en las dependencias a `common_toolkit`/`ascendant_equipment` rechazaba cualquier build beta (en el esquema de versiones Maven, un pre-release como `0.0.0-beta.1` ordena por debajo de `0.0.0`). Corregido a `[0.0.0-alpha,)`.
+  - `ascendant_equipment` bajado temporalmente de `required` a `optional` — no tiene build todavía y bloqueaba la carga completa del mod (se revierte cuando exista un JAR real).
+  - `BlocksMixin`/`ItemsMixin`: `Blocks.register()` cambió de una sobrecarga por `String` a una por `BlockItemId` en 26.2, y el registro de vanilla ya no usa constantes de tipo `String` (usa campos estáticos `BlockItemIds.*`). Reescrito el `@Slice`/`@At` del mixin contra el bytecode real de 26.2.
+  - `ItemsMixin`: el campo estático `SPAWNER_KEY` quedaba `null` en el momento del `@ModifyVariable` porque los campos fusionados por mixin se añaden al final del `<clinit>` del target, después de que `Items` ya registrara `spawner`. Cambiado a cálculo en línea.
+  - `runs.data` en `build.gradle` estaba en `serverData()`; el código escucha `GatherDataEvent.Client`, que solo dispara `clientData()`. Revertido.
+  - JEI pinnado a `30.15.0.121` (no la última `30.16.x`, que exige `neoforge >= 26.2.0.40-beta`; este proyecto se queda en `26.2.0.32-beta`).
+- `./gradlew.bat clean build` en verde (primer build completo con JAR + `runData`, no solo `compileJava`).
+
 ## 0.0.0-beta.4
 
 - Port Fase 3: mixins portados 1:1 desde ApothicSpawners (26.1.2) a 26.2.

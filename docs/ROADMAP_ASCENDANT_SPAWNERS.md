@@ -115,4 +115,13 @@ Cada fase = un encargo a OpenCode. Orden pensado por dependencia técnica.
 - MixinExtras (`WrapOperation`) usado transitivamente vía NeoForge, sin dependencia extra.
 - Quedan fuera: arte y QA de paridad.
 
-Próximo paso: **Fase 4** (arte propio).
+**Fase 4 — HECHA** (contenido data-driven y arte propio).
+
+- `en_us.json` reemplazado por el contenido real traducido (namespace `ascendant_spawners`), incluidas las claves de compat pendientes desde la Fase 2.
+- 14 JSON de advancement portados a `data/ascendant_spawners/advancement/` + 2 tags estáticas (`blacklisted_from_spawners`, `non_treasure`).
+- `./gradlew.bat runData` verificado: genera correctamente el encantamiento `capturing`, la loot table `unstable_spawner` y las 32 recetas de `spawner_modifiers` desde los providers de la Fase 1.
+- 2 texturas placeholder propias (`spawner_jei.png` 256×256, `advancements/backgrounds/apoth.png` 64×64).
+- **Bugs de infraestructura encontrados y corregidos** (existían desde el scaffold inicial, invisibles porque las fases 1-3 solo compilaban, no hacían `build`/`runData` completo — detalle completo en `CHANGELOG.md` v0.0.0-beta.5): ruta de `generateModMetadata` (el `mods.toml` nunca se generaba de verdad), rangos de versión semver de las dependencias a `common_toolkit`/`ascendant_equipment` (rechazaban cualquier beta), `ascendant_equipment` bajado a `optional` temporalmente (sin build todavía), reescritura de `BlocksMixin`/`ItemsMixin` contra la API real de `Blocks.register()` en 26.2 (cambió de `String` a `BlockItemId`), orden de inicialización de campos mixin en `ItemsMixin`, tipo de run de datagen (`clientData()` no `serverData()`), y JEI pinnado a `30.15.0.121` (la `30.16.x` exige NeoForge `26.2.0.40-beta+`, este proyecto se queda en `26.2.0.32-beta`).
+- `./gradlew.bat clean build` en verde — primer build completo del mod (JAR + datagen), no solo `compileJava`.
+
+Próximo paso: **Fase 5** (QA de paridad funcional), a cargo del usuario.

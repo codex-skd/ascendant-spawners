@@ -1,0 +1,12 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:echo_shard",
+    "offhand": "minecraft:quartz",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:echoing",
+            "min": 0,
+            "value": -1
+        }
+    ]
+}

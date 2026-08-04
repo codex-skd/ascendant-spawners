@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:campfire",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:burning",
+            "mode": "set",
+            "value": true
+        }
+    ]
+}

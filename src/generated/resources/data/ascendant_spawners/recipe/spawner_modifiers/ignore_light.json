@@ -1,0 +1,11 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:soul_lantern",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:ignore_light",
+            "mode": "set",
+            "value": true
+        }
+    ]
+}

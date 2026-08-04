@@ -85,20 +85,28 @@ config="${mod_id}.mixins.json"
     side="BOTH"
 
 # Common Toolkit — port of Placebo by Shadows_of_Fire, required by the original ApothicSpawners (as "placebo").
+# versionRange lower bound is "0.0.0-alpha", not "0.0.0": Maven-style version comparison (used by
+# NeoForge) ranks qualifiers alpha < beta < milestone < rc < snapshot < (numeric) < sp/release, so
+# "0.0.0-beta.1" sorts BELOW "0.0.0" (and even below "0.0.0-0" — numeric qualifiers rank above beta).
+# "alpha" is the lowest known qualifier, so this accepts any 0.0.0-alpha/beta/rc/etc build.
 [[dependencies.${mod_id}]]
     modId="common_toolkit"
     type="required"
     reason="Port of the original ApothicSpawners dependency on Placebo."
-    versionRange="[0.0.0,)"
+    versionRange="[0.0.0-alpha,)"
     ordering="AFTER"
     side="BOTH"
 
 # Ascendant Equipment — port of Apotheosis by Shadows_of_Fire. Ascendant Spawners is its spawner module.
+# Temporarily "optional" instead of "required": Ascendant Equipment has no build yet, so a required
+# dependency would prevent this mod from loading at all (blocks runData/testing/CurseForge betas).
+# The code does not call any Ascendant Equipment API yet either. Flip back to "required" once
+# Ascendant Equipment ships a real build and this mod actually integrates with it.
 [[dependencies.${mod_id}]]
     modId="ascendant_equipment"
-    type="required"
+    type="optional"
     reason="Ascendant Spawners is the spawner module of Ascendant Equipment (port of ApothicSpawners, module of Apotheosis)."
-    versionRange="[0.0.0,)"
+    versionRange="[0.0.0-alpha,)"
     ordering="AFTER"
     side="BOTH"
 

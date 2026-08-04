@@ -1,0 +1,29 @@
+{
+    "parent": "ascendant_spawners:light",
+    "display": {
+        "icon": {
+            "id": "minecraft:conduit"
+        },
+        "title": {
+            "translate": "advancements.ascendant_spawners.conditions"
+        },
+        "description": {
+            "translate": "advancements.ascendant_spawners.conditions.desc"
+        },
+        "frame": "challenge"
+    },
+    "criteria": {
+        "modifier": {
+            "trigger": "ascendant_spawners:spawner_modifier",
+            "conditions": {
+                "ignore_conditions": true
+            }
+        }
+    },
+    "requirements": [
+        [
+            "modifier"
+        ]
+    ],
+    "sends_telemetry_event": true
+}

@@ -1,0 +1,12 @@
+{
+    "type": "ascendant_spawners:spawner_modifier",
+    "mainhand": "minecraft:prismarine_crystals",
+    "offhand": "minecraft:quartz",
+    "stat_changes": [
+        {
+            "type": "ascendant_spawners:req_player_range",
+            "min": 1,
+            "value": -4
+        }
+    ]
+}

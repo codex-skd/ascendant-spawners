@@ -1,0 +1,33 @@
+{
+    "parent": "ascendant_spawners:root",
+    "display": {
+        "icon": {
+            "id": "minecraft:witch_spawn_egg"
+        },
+        "title": {
+            "translate": "advancements.ascendant_spawners.capturing"
+        },
+        "description": {
+            "translate": "advancements.ascendant_spawners.capturing.desc"
+        },
+        "frame": "task"
+    },
+    "criteria": {
+        "egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "predicates": {
+                        "ascendant_spawners:spawn_egg": {}
+                    }
+                }]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "egg"
+        ]
+    ],
+    "sends_telemetry_event": true
+}
