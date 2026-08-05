@@ -97,16 +97,16 @@ config="${mod_id}.mixins.json"
     side="BOTH"
 
 # Ascendant Equipment — port of Apotheosis by Shadows_of_Fire. Ascendant Spawners is its spawner module.
-# Temporarily "optional" instead of "required": Ascendant Equipment is not yet integrated with the
-# spawner code, so a required dependency would prevent this mod from loading at all. The versionRange
-# floor is its current beta (prerelease handling as above). Flip back to "required" once this mod
-# actually integrates with Ascendant Equipment's API.
+# Optional dependency kept WITHOUT an ordering constraint: Ascendant Equipment declares this mod with
+# ordering="AFTER", so an "AFTER" here would create a mutual ordering cycle and fail mod sorting.
+# The versionRange floor is its current beta (prerelease handling as above). Flip to "required" once
+# this mod actually integrates with Ascendant Equipment's API (still without a reciprocal ordering).
 [[dependencies.${mod_id}]]
     modId="ascendant_equipment"
     type="optional"
     reason="Ascendant Spawners is the spawner module of Ascendant Equipment (port of ApothicSpawners, module of Apotheosis)."
-    versionRange="[0.0.0-beta.4,)"
-    ordering="AFTER"
+    versionRange="[0.0.0-beta.5,)"
+    ordering="NONE"
     side="BOTH"
 
 # JEI — optional compat (recipe viewer integration).
