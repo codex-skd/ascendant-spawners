@@ -134,7 +134,7 @@ configurations {
 
 dependencies {
     // Common Toolkit — port of Placebo, required by the original ApothicSpawners.
-    implementation files("libs/common_toolkit-26.2-neoforge-0.0.0-beta.1.jar")
+    implementation files("libs/common_toolkit-26.2-neoforge-0.0.0-beta.2.jar")
 
     // Ascendant Equipment — port of Apotheosis. Ascendant Spawners is its spawner module.
     // Not yet added: the ported code does not call any Ascendant Equipment API yet (kept
