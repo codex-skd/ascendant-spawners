@@ -3,7 +3,7 @@
 ## 0.0.0-beta.7
 
 - **Fix ciclo de carga (crash de arranque)**: la dependencia opcional de `ascendant_equipment` declaraba `ordering="AFTER"`, pero `ascendant_equipment` también declara a este mod con `ordering="AFTER"`. El par de restricciones mutuas formaba un ciclo que NeoForge no puede ordenar → `Mod Sorting failed. Detected Cycles` y el cliente no arranca. Corregido a `ordering="NONE"` (la dependencia sigue siendo `optional` y su floor sube a `[0.0.0-beta.5,)`).
-- Subido a CurseForge vía `curseforge-upload.ps1`.
+- Subido a CurseForge vía `curseforge-upload.ps1` (file ID `8583893`).
 
 ## 0.0.0-beta.6
 
