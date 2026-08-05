@@ -1,5 +1,10 @@
 # Changelog — Ascendant Spawners
 
+## 0.0.0-beta.7
+
+- **Fix ciclo de carga (crash de arranque)**: la dependencia opcional de `ascendant_equipment` declaraba `ordering="AFTER"`, pero `ascendant_equipment` también declara a este mod con `ordering="AFTER"`. El par de restricciones mutuas formaba un ciclo que NeoForge no puede ordenar → `Mod Sorting failed. Detected Cycles` y el cliente no arranca. Corregido a `ordering="NONE"` (la dependencia sigue siendo `optional` y su floor sube a `[0.0.0-beta.5,)`).
+- Subido a CurseForge vía `curseforge-upload.ps1`.
+
 ## 0.0.0-beta.6
 
 - **Fix dependencias**: sustituido el parche `[0.0.0-alpha,)` introducido en beta.5 por floors beta exactos: `common_toolkit` `[0.0.0-beta.1,)` y `ascendant_equipment` (optional) `[0.0.0-beta.4,)`. El rango `[0.0.0-alpha,)` funcionaba (la comparación Maven ordena `alpha` por debajo de `beta`) pero era impreciso y confuso — el floor ahora refleja la versión beta real de cada dependencia.
