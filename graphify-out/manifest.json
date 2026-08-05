@@ -1,8 +1,8 @@
 {
   "build.gradle": {
-    "mtime": 1785851702.7796316,
-    "ast_hash": "a6e06d742f375fdf75bc89d0160164c5",
-    "semantic_hash": "a6e06d742f375fdf75bc89d0160164c5"
+    "mtime": 1785942542.3143897,
+    "ast_hash": "bae5e19ef7918f42fc77e21812e26a52",
+    "semantic_hash": ""
   },
   "gradlew": {
     "mtime": 1785147528.765235,
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785851785.8810797,
-    "ast_hash": "72e8fcbec34a6ba8642c7a74396b3b4a",
+    "mtime": 1785942610.825219,
+    "ast_hash": "1432358bff07d7a721605d3c6513043d",
     "semantic_hash": ""
   },
   "README.md": {
@@ -507,6 +507,11 @@
   "src/main/resources/assets/ascendant_spawners/textures/gui/spawner_jei.png": {
     "mtime": 1785850993.580304,
     "ast_hash": "277258b07402976ee736abc5cfbfc49e",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.6.md": {
+    "mtime": 1785942605.7692363,
+    "ast_hash": "83a0d169b378e7de2f0e81a216e982d5",
     "semantic_hash": ""
   }
 }

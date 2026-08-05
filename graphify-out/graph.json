@@ -979,7 +979,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger",
-      "community": 13,
+      "community": 2,
       "norm_label": "modifiertrigger.java"
     },
     {
@@ -989,7 +989,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_modifiertrigger",
-      "community": 13,
+      "community": 2,
       "norm_label": "modifiertrigger"
     },
     {
@@ -999,7 +999,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "simplecriteriontrigger",
-      "community": 13,
+      "community": 2,
       "norm_label": "simplecriteriontrigger"
     },
     {
@@ -1009,7 +1009,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_modifiertrigger_codec",
-      "community": 13,
+      "community": 2,
       "norm_label": ".codec()"
     },
     {
@@ -1019,7 +1019,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_java_codec",
-      "community": 13,
+      "community": 2,
       "norm_label": "codec"
     },
     {
@@ -1029,7 +1029,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_modifiertrigger_trigger",
-      "community": 13,
+      "community": 2,
       "norm_label": ".trigger()"
     },
     {
@@ -1039,7 +1039,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverplayer",
-      "community": 13,
+      "community": 2,
       "norm_label": "serverplayer"
     },
     {
@@ -1049,7 +1049,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_triggerinstance",
-      "community": 13,
+      "community": 2,
       "norm_label": "triggerinstance"
     },
     {
@@ -1059,7 +1059,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "simpleinstance",
-      "community": 13,
+      "community": 2,
       "norm_label": "simpleinstance"
     },
     {
@@ -1069,7 +1069,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "contextawarepredicate",
-      "community": 13,
+      "community": 2,
       "norm_label": "contextawarepredicate"
     },
     {
@@ -1079,7 +1079,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ints",
-      "community": 13,
+      "community": 2,
       "norm_label": "ints"
     },
     {
@@ -1089,7 +1089,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_triggerinstance_test",
-      "community": 13,
+      "community": 2,
       "norm_label": ".test()"
     },
     {
@@ -1099,7 +1099,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_advancements_modifiertrigger_triggerinstance_check",
-      "community": 13,
+      "community": 2,
       "norm_label": ".check()"
     },
     {
@@ -2129,7 +2129,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "livingentity",
-      "community": 10,
+      "community": 7,
       "norm_label": "livingentity"
     },
     {
@@ -3399,7 +3399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerjadeplugin",
-      "community": 12,
+      "community": 4,
       "norm_label": "spawnerjadeplugin.java"
     },
     {
@@ -3409,7 +3409,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerjadeplugin_spawnerjadeplugin",
-      "community": 12,
+      "community": 4,
       "norm_label": "spawnerjadeplugin"
     },
     {
@@ -3419,7 +3419,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "iwailaplugin",
-      "community": 12,
+      "community": 4,
       "norm_label": "iwailaplugin"
     },
     {
@@ -3429,7 +3429,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "wailaplugin",
-      "community": 12,
+      "community": 4,
       "norm_label": "wailaplugin"
     },
     {
@@ -3439,7 +3439,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerjadeplugin_spawnerjadeplugin_register",
-      "community": 12,
+      "community": 4,
       "norm_label": ".register()"
     },
     {
@@ -3449,7 +3449,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "iwailacommonregistration",
-      "community": 12,
+      "community": 4,
       "norm_label": "iwailacommonregistration"
     },
     {
@@ -3459,7 +3459,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerjadeplugin_java_override",
-      "community": 12,
+      "community": 4,
       "norm_label": "override"
     },
     {
@@ -3469,7 +3469,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerjadeplugin_spawnerjadeplugin_registerclient",
-      "community": 12,
+      "community": 4,
       "norm_label": ".registerclient()"
     },
     {
@@ -3479,7 +3479,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "iwailaclientregistration",
-      "community": 12,
+      "community": 4,
       "norm_label": "iwailaclientregistration"
     },
     {
@@ -3549,7 +3549,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider",
-      "community": 12,
+      "community": 4,
       "norm_label": "spawnerserverdataprovider.java"
     },
     {
@@ -3559,7 +3559,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_spawnerserverdataprovider",
-      "community": 12,
+      "community": 4,
       "norm_label": "spawnerserverdataprovider"
     },
     {
@@ -3569,7 +3569,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "iserverdataprovider",
-      "community": 12,
+      "community": 4,
       "norm_label": "iserverdataprovider"
     },
     {
@@ -3579,7 +3579,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_java_blockaccessor",
-      "community": 12,
+      "community": 4,
       "norm_label": "blockaccessor"
     },
     {
@@ -3589,7 +3589,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_java_logger",
-      "community": 12,
+      "community": 4,
       "norm_label": "logger"
     },
     {
@@ -3599,7 +3599,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_spawnerserverdataprovider_appendserverdata",
-      "community": 12,
+      "community": 4,
       "norm_label": ".appendserverdata()"
     },
     {
@@ -3609,7 +3609,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "compoundtag",
-      "community": 12,
+      "community": 4,
       "norm_label": "compoundtag"
     },
     {
@@ -3619,7 +3619,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_java_override",
-      "community": 12,
+      "community": 4,
       "norm_label": "override"
     },
     {
@@ -3629,7 +3629,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_spawnerserverdataprovider_getuid",
-      "community": 12,
+      "community": 4,
       "norm_label": ".getuid()"
     },
     {
@@ -3639,7 +3639,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_compat_spawnerserverdataprovider_java_identifier",
-      "community": 12,
+      "community": 4,
       "norm_label": "identifier"
     },
     {
@@ -4299,7 +4299,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_modifiers_spawnermodifier_spawnermodifier_apply",
-      "community": 7,
+      "community": 2,
       "norm_label": ".apply()"
     },
     {
@@ -5279,7 +5279,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_main_java_com_skd_ascendantspawners_stats_spawnerstat_spawnerstat_getvalue",
-      "community": 13,
+      "community": 2,
       "norm_label": ".getvalue()"
     },
     {
@@ -5693,10 +5693,20 @@
       "norm_label": "changelog \u2014 ascendant spawners"
     },
     {
-      "label": "0.0.0-beta.5",
+      "label": "0.0.0-beta.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_0_0_0_beta_6",
+      "community": 29,
+      "norm_label": "0.0.0-beta.6"
+    },
+    {
+      "label": "0.0.0-beta.5",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_5",
       "community": 29,
@@ -5706,7 +5716,7 @@
       "label": "0.0.0-beta.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_4",
       "community": 29,
@@ -5716,7 +5726,7 @@
       "label": "0.0.0-beta.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_3",
       "community": 29,
@@ -5726,7 +5736,7 @@
       "label": "0.0.0-beta.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_2",
       "community": 29,
@@ -5736,7 +5746,7 @@
       "label": "0.0.0-beta.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L48",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1",
       "community": 29,
@@ -6301,6 +6311,16 @@
       "id": "docs_curseforge_versions_0_0_0_beta_5",
       "community": 42,
       "norm_label": "0.0.0-beta.5.md"
+    },
+    {
+      "label": "0.0.0-beta.6.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/0.0.0-beta.6.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_0_0_0_beta_6",
+      "community": 12,
+      "norm_label": "0.0.0-beta.6.md"
     },
     {
       "label": "Publish Public Job",
@@ -20150,7 +20170,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L48",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "changelog_changelog_ascendant_spawners",
       "target": "changelog_0_0_0_beta_1",
@@ -20160,7 +20180,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "changelog_changelog_ascendant_spawners",
       "target": "changelog_0_0_0_beta_2",
@@ -20170,7 +20190,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "changelog_changelog_ascendant_spawners",
       "target": "changelog_0_0_0_beta_3",
@@ -20180,7 +20200,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "changelog_changelog_ascendant_spawners",
       "target": "changelog_0_0_0_beta_4",
@@ -20190,10 +20210,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "changelog_changelog_ascendant_spawners",
       "target": "changelog_0_0_0_beta_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_changelog_ascendant_spawners",
+      "target": "changelog_0_0_0_beta_6",
       "confidence_score": 1.0
     },
     {
@@ -20729,5 +20759,5 @@
       ]
     }
   ],
-  "built_at_commit": "33adc4e85c2b3244aa50dc09164ce1a8e9d3cca3"
+  "built_at_commit": "df046ccd0d0cf448179def2de8b0dd0fd8a0ec0d"
 }
