@@ -85,28 +85,27 @@ config="${mod_id}.mixins.json"
     side="BOTH"
 
 # Common Toolkit — port of Placebo by Shadows_of_Fire, required by the original ApothicSpawners (as "placebo").
-# versionRange lower bound is "0.0.0-alpha", not "0.0.0": Maven-style version comparison (used by
-# NeoForge) ranks qualifiers alpha < beta < milestone < rc < snapshot < (numeric) < sp/release, so
-# "0.0.0-beta.1" sorts BELOW "0.0.0" (and even below "0.0.0-0" — numeric qualifiers rank above beta).
-# "alpha" is the lowest known qualifier, so this accepts any 0.0.0-alpha/beta/rc/etc build.
+# versionRange lower bound is the dependency's current beta, not "0.0.0": Maven-style version
+# comparison (used by NeoForge) ranks qualifiers alpha < beta < milestone < rc < snapshot < (numeric),
+# so "0.0.0-beta.1" sorts BELOW "0.0.0". A bare "[0.0.0,)" would reject every beta build.
 [[dependencies.${mod_id}]]
     modId="common_toolkit"
     type="required"
     reason="Port of the original ApothicSpawners dependency on Placebo."
-    versionRange="[0.0.0-alpha,)"
+    versionRange="[0.0.0-beta.1,)"
     ordering="AFTER"
     side="BOTH"
 
 # Ascendant Equipment — port of Apotheosis by Shadows_of_Fire. Ascendant Spawners is its spawner module.
-# Temporarily "optional" instead of "required": Ascendant Equipment has no build yet, so a required
-# dependency would prevent this mod from loading at all (blocks runData/testing/CurseForge betas).
-# The code does not call any Ascendant Equipment API yet either. Flip back to "required" once
-# Ascendant Equipment ships a real build and this mod actually integrates with it.
+# Temporarily "optional" instead of "required": Ascendant Equipment is not yet integrated with the
+# spawner code, so a required dependency would prevent this mod from loading at all. The versionRange
+# floor is its current beta (prerelease handling as above). Flip back to "required" once this mod
+# actually integrates with Ascendant Equipment's API.
 [[dependencies.${mod_id}]]
     modId="ascendant_equipment"
     type="optional"
     reason="Ascendant Spawners is the spawner module of Ascendant Equipment (port of ApothicSpawners, module of Apotheosis)."
-    versionRange="[0.0.0-alpha,)"
+    versionRange="[0.0.0-beta.4,)"
     ordering="AFTER"
     side="BOTH"
 

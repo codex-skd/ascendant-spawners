@@ -137,8 +137,9 @@ dependencies {
     implementation files("libs/common_toolkit-26.2-neoforge-0.0.0-beta.1.jar")
 
     // Ascendant Equipment — port of Apotheosis. Ascendant Spawners is its spawner module.
-    // Not yet added: Ascendant Equipment has no build output yet (still template scaffold).
-    // Add once it produces a JAR: implementation files("libs/ascendant_equipment-26.2-neoforge-<version>.jar")
+    // Not yet added: the ported code does not call any Ascendant Equipment API yet (kept
+    // "optional" in neoforge.mods.toml). Add once it integrates:
+    // implementation files("libs/ascendant_equipment-26.2-neoforge-0.0.0-beta.4.jar")
 
     // JEI — optional compat (Fase 2). API for compile time, full artifact only at runtime (not published as a dependency).
     // Pinned to 30.15.0.121, not the newest 30.16.x — those require neoforge >= 26.2.0.40-beta,
