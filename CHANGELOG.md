@@ -3,6 +3,7 @@
 ## 0.0.0-beta.6
 
 - **Fix dependencias**: sustituido el parche `[0.0.0-alpha,)` introducido en beta.5 por floors beta exactos: `common_toolkit` `[0.0.0-beta.1,)` y `ascendant_equipment` (optional) `[0.0.0-beta.4,)`. El rango `[0.0.0-alpha,)` funcionaba (la comparación Maven ordena `alpha` por debajo de `beta`) pero era impreciso y confuso — el floor ahora refleja la versión beta real de cada dependencia.
+- Subido a CurseForge vía `curseforge-upload.ps1` (file ID `8582957`).
 
 ## 0.0.0-beta.5
 
