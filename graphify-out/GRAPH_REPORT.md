@@ -1,16 +1,16 @@
-# Graph Report - 26.2  (2026-08-05)
+# Graph Report - 26.2  (2026-08-06)
 
 ## Corpus Check
-- 99 files · ~24,148 words
+- 101 files · ~25,190 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 648 nodes · 1317 edges · 47 communities (32 shown, 15 thin omitted)
+- 661 nodes · 1328 edges · 51 communities (36 shown, 15 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `df046ccd`
+- Built from commit: `ed51d494`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,6 +27,7 @@
 - Data Management
 - Game Events
 - GUI Elements
+- SpawnerServerDataProvider.java
 - Stat Management
 - Percentage Stat
 - JEI Integration
@@ -54,6 +55,7 @@
 - Apoth Advancement Background
 - JEI GUI for Spawner
 - stalking-dragons/minecraft
+- BooleanStat
 
 ## God Nodes (most connected - your core abstractions)
 1. `SpawnerTile` - 52 edges
@@ -63,9 +65,9 @@
 5. `StatModifier` - 24 edges
 6. `Provider` - 21 edges
 7. `SpawnerCategory` - 17 edges
-8. `AscSpEvents` - 14 edges
-9. `AscSpObjects` - 14 edges
-10. `SpawnerBlock` - 14 edges
+8. `Changelog — Ascendant Spawners` - 17 edges
+9. `AscSpEvents` - 14 edges
+10. `AscSpObjects` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Publish Public Job` --references--> `Changelog Version 0.0.0-beta.5`  [EXTRACTED]
@@ -76,8 +78,8 @@
   src/main/java/com/skd/ascendantspawners/AscSpObjects.java → src/main/java/com/skd/ascendantspawners/advancements/ModifierTrigger.java
 - `AscSpObjects` --references--> `SpawnerModifier`  [EXTRACTED]
   src/main/java/com/skd/ascendantspawners/AscSpObjects.java → src/main/java/com/skd/ascendantspawners/modifiers/SpawnerModifier.java
-- `SpawnerTile` --references--> `SpawnerStat`  [EXTRACTED]
-  src/main/java/com/skd/ascendantspawners/block/SpawnerTile.java → src/main/java/com/skd/ascendantspawners/stats/SpawnerStat.java
+- `SpawnerCategory` --references--> `SpawnerModifier`  [EXTRACTED]
+  src/main/java/com/skd/ascendantspawners/compat/SpawnerCategory.java → src/main/java/com/skd/ascendantspawners/modifiers/SpawnerModifier.java
 
 ## Import Cycles
 - None detected.
@@ -86,31 +88,31 @@
 - **Project Overview** — .gitlab-ci.yml_publish-public, CHANGELOG.md_0.0.0-beta.5, README.md_ascendant-spawners [INFERRED]
 - **Dependencies for Ascendancy** — ascendant_spawners_common_toolkit, ascendant_spawners_apothic_spawners [EXTRACTED 1.00]
 
-## Communities (47 total, 15 thin omitted)
+## Communities (51 total, 15 thin omitted)
 
 ### Community 0 - "World Generation"
 Cohesion: 0.06
-Nodes (35): Biome, BiomeManager, ChunkAccess, ChunkSource, ChunkStatus, Context, DifficultyInstance, DimensionType (+27 more)
+Nodes (34): Biome, BiomeManager, ChunkAccess, ChunkSource, ChunkStatus, Context, DifficultyInstance, DimensionType (+26 more)
 
 ### Community 1 - "Recipe Management"
-Cohesion: 0.09
-Nodes (24): LegacyRecipeProvider, RecipeOutput, ASRecipeProvider, PackOutput, Recipe, getSerializedName(), Codec, MapCodec (+16 more)
+Cohesion: 0.11
+Nodes (17): LegacyRecipeProvider, RecipeOutput, ASRecipeProvider, PackOutput, Recipe, getSerializedName(), Codec, MapCodec (+9 more)
 
 ### Community 2 - "Spawner Behavior"
-Cohesion: 0.06
-Nodes (25): ContextAwarePredicate, Ints, ServerPlayer, SimpleCriterionTrigger, SimpleInstance, Codec, ModifierTrigger, TriggerInstance (+17 more)
+Cohesion: 0.07
+Nodes (26): ContextAwarePredicate, Ints, ServerPlayer, SimpleCriterionTrigger, SimpleInstance, Codec, ModifierTrigger, TriggerInstance (+18 more)
 
 ### Community 3 - "Event Handling"
 Cohesion: 0.09
 Nodes (23): EventBusSubscriber, Ingredient, Nullable, PlacementInfo, Recipe, RecipeBookCategory, RecipeDisplay, RecipeInput (+15 more)
 
 ### Community 4 - "Mod Integration"
-Cohesion: 0.06
-Nodes (37): Client, CompoundTag, FMLCommonSetupEvent, IBlockComponentProvider, IPluginConfig, IServerDataProvider, ITooltip, IWailaClientRegistration (+29 more)
+Cohesion: 0.09
+Nodes (24): Client, FMLCommonSetupEvent, IBlockComponentProvider, IPluginConfig, ITooltip, Mod, NewRegistryEvent, Registry (+16 more)
 
 ### Community 5 - "Entity Spawning"
 Cohesion: 0.11
-Nodes (23): AABB, BaseSpawner, Either, EntityTypeTest, LightLayer, SpawnData, SpawnerBlockEntity, BlockEntity (+15 more)
+Nodes (26): AABB, BaseSpawner, Either, EntitySpawnReason, EntityTypeTest, GameEvent, LightLayer, Mob (+18 more)
 
 ### Community 6 - "Data Providers"
 Cohesion: 0.12
@@ -129,12 +131,16 @@ Cohesion: 0.13
 Nodes (19): BootstrapContext, DataComponentGetter, DataComponentPredicate, DataComponentType, DeferredHelper, DeferredHolder, MapCodec, SpawnEggItemPredicate (+11 more)
 
 ### Community 10 - "Game Events"
-Cohesion: 0.13
-Nodes (16): EntitySpawnReason, EntityTeleportEvent, ItemTooltipEvent, LivingDropsEvent, LivingExperienceDropEvent, MethodHandle, Mob, MobDespawnEvent (+8 more)
+Cohesion: 0.15
+Nodes (14): EntityTeleportEvent, ItemTooltipEvent, LivingDropsEvent, LivingExperienceDropEvent, MethodHandle, MobDespawnEvent, MobSplitEvent, OnDatapackSyncEvent (+6 more)
 
 ### Community 11 - "GUI Elements"
-Cohesion: 0.16
+Cohesion: 0.17
 Nodes (13): GuiGraphicsExtractor, IDrawable, IFocusGroup, IGuiHelper, IRecipeCategory, IRecipeLayoutBuilder, IRecipeSlotsView, IRecipeType (+5 more)
+
+### Community 13 - "SpawnerServerDataProvider.java"
+Cohesion: 0.18
+Nodes (13): CompoundTag, IServerDataProvider, IWailaClientRegistration, IWailaCommonRegistration, IWailaPlugin, Override, SpawnerJadePlugin, BlockAccessor (+5 more)
 
 ### Community 14 - "Stat Management"
 Cohesion: 0.25
@@ -177,32 +183,36 @@ Cohesion: 0.18
 Nodes (10): CurseForge — Variables del proyecto, Datos para el alta manual (formulario "Create Project"), Icono / imagen del proyecto, Nota, Proyecto, Rama, Tag, Tokens (+2 more)
 
 ### Community 29 - "Changelog — Ascendant Spawners"
-Cohesion: 0.25
-Nodes (7): 0.0.0-beta.1, 0.0.0-beta.2, 0.0.0-beta.3, 0.0.0-beta.4, 0.0.0-beta.5, 0.0.0-beta.6, Changelog — Ascendant Spawners
+Cohesion: 0.11
+Nodes (18): 0.0.0-beta.1, 0.0.0-beta.1, 0.0.0-beta.2, 0.0.0-beta.2, 0.0.0-beta.3, 0.0.0-beta.3, 0.0.0-beta.4, 0.0.0-beta.4 (+10 more)
 
 ### Community 30 - "CLAUDE.md — ascendant_spawners (26.2)"
 Cohesion: 0.50
 Nodes (3): CLAUDE.md — ascendant_spawners (26.2), Prioridad de instrucciones, Workflow del mod
 
+### Community 48 - "BooleanStat"
+Cohesion: 0.27
+Nodes (6): BooleanStat, Codec, Component, Override, RegistryFriendlyByteBuf, StreamCodec
+
 ## Knowledge Gaps
-- **66 isolated node(s):** `ADD`, `SET`, `Workflow del mod`, `Prioridad de instrucciones`, `0.0.0-beta.6` (+61 more)
+- **76 isolated node(s):** `ADD`, `SET`, `Workflow del mod`, `Prioridad de instrucciones`, `0.0.0-beta.7` (+71 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpawnerTile` connect `Spawner Behavior` to `Recipe Management`, `Event Handling`, `Mod Integration`, `Entity Spawning`, `Stat Management`, `Percentage Stat`?**
-  _High betweenness centrality (0.189) - this node is a cross-community bridge._
-- **Why does `SpawnerStat` connect `Recipe Management` to `Spawner Behavior`, `Mod Integration`, `Entity Spawning`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `SpawnerTile` connect `Spawner Behavior` to `Recipe Management`, `Event Handling`, `Mod Integration`, `Entity Spawning`, `Stat Management`, `Percentage Stat`, `BooleanStat`?**
+  _High betweenness centrality (0.182) - this node is a cross-community bridge._
+- **Why does `SpawnerStat` connect `Spawner Behavior` to `Recipe Management`, `Mod Integration`, `Entity Spawning`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **Why does `SpawnerModifier` connect `Event Handling` to `Data Management`, `Spawner Behavior`, `GUI Elements`, `Recipe Management`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **What connects `ADD`, `SET`, `Workflow del mod` to the rest of the system?**
-  _66 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _76 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `World Generation` be split into smaller, more focused modules?**
-  _Cohesion score 0.05777345017851347 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05860805860805861 - nodes in this community are weakly interconnected._
 - **Should `Recipe Management` be split into smaller, more focused modules?**
-  _Cohesion score 0.08928571428571429 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11260504201680673 - nodes in this community are weakly interconnected._
 - **Should `Spawner Behavior` be split into smaller, more focused modules?**
-  _Cohesion score 0.06398730830248546 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06586538461538462 - nodes in this community are weakly interconnected._

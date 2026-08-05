@@ -12,6 +12,7 @@
   "10": "Game Events",
   "11": "GUI Elements",
   "12": "Mod Support",
+  "13": "SpawnerServerDataProvider.java",
   "14": "Stat Management",
   "15": "Percentage Stat",
   "16": "JEI Integration",
@@ -45,5 +46,8 @@
   "44": "Icon for Ascendant Spawners",
   "45": "Apoth Advancement Background",
   "46": "JEI GUI for Spawner",
-  "47": "stalking-dragons/minecraft"
+  "47": "stalking-dragons/minecraft",
+  "48": "BooleanStat",
+  "49": "0.0.0-beta.7.md",
+  "50": "0.0.0-beta.8.md"
 }
