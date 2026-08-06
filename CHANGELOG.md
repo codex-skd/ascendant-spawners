@@ -1,5 +1,21 @@
 # Changelog — Ascendant Spawners
 
+## 0.0.0-beta.10
+
+- **Endurecimiento de seguridad**: Agregados null-checks en `SpawnerJEIPlugin` para evitar potencial `NullPointerException` al acceder a contexto de nivel cliente. Todas las llamadas opcionales a Minecraft API ahora protegen correctamente contra valores null.
+- **Corrección crítica del sistema de build**: Corregida lógica de detección de mixins en `build.gradle`. Versiones anteriores tenían un algoritmo de descubrimiento de archivos quebrado que impedía que los mixins se registraran correctamente en el JAR. Los tres mixins (`BlocksMixin`, `ItemsMixin`, `ItemStackMixin`) ahora se detectan y compilan correctamente. Técnico: se reescribió la construcción de rutas para usar la API `file()` de Gradle y se reemplazó el parsing frágil de strings con filtrado directo de `listFiles()`.
+- **Documentación**: Agregados comentarios inline explicando ruta de migración futura para actualizaciones NeoForge 26.2+.
+- **Calidad de código**: Compilación completa verificada contra NeoForge 26.2.0.37-beta con cero errores o warnings críticos.
+- Subido a CurseForge vía `curseforge-upload.ps1`.
+
+## 0.0.0-beta.9
+
+- Checkpoint de estabilidad. Sin cambios visibles respecto a beta.8.
+
+## 0.0.0-beta.8
+
+- Reconstruido contra NeoForge 26.2.0.37-beta. Arranque verificado mediante dev server run.
+
 ## 0.0.0-beta.7
 
 - **Fix ciclo de carga (crash de arranque)**: la dependencia opcional de `ascendant_equipment` declaraba `ordering="AFTER"`, pero `ascendant_equipment` también declara a este mod con `ordering="AFTER"`. El par de restricciones mutuas formaba un ciclo que NeoForge no puede ordenar → `Mod Sorting failed. Detected Cycles` y el cliente no arranca. Corregido a `ordering="NONE"` (la dependencia sigue siendo `optional` y su floor sube a `[0.0.0-beta.5,)`).
