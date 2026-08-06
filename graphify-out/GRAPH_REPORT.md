@@ -1,16 +1,16 @@
-# Graph Report - 26.2  (2026-08-06)
+# Graph Report - 26.2  (2026-08-07)
 
 ## Corpus Check
-- 101 files · ~25,190 words
+- 102 files · ~25,547 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 661 nodes · 1328 edges · 51 communities (36 shown, 15 thin omitted)
+- 665 nodes · 1331 edges · 52 communities (37 shown, 15 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ed51d494`
+- Built from commit: `80402708`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,8 +64,8 @@
 4. `SpawnerStat` - 33 edges
 5. `StatModifier` - 24 edges
 6. `Provider` - 21 edges
-7. `SpawnerCategory` - 17 edges
-8. `Changelog — Ascendant Spawners` - 17 edges
+7. `Changelog — Ascendant Spawners` - 20 edges
+8. `SpawnerCategory` - 17 edges
 9. `AscSpEvents` - 14 edges
 10. `AscSpObjects` - 14 edges
 
@@ -78,8 +78,8 @@
   src/main/java/com/skd/ascendantspawners/AscSpObjects.java → src/main/java/com/skd/ascendantspawners/advancements/ModifierTrigger.java
 - `AscSpObjects` --references--> `SpawnerModifier`  [EXTRACTED]
   src/main/java/com/skd/ascendantspawners/AscSpObjects.java → src/main/java/com/skd/ascendantspawners/modifiers/SpawnerModifier.java
-- `SpawnerCategory` --references--> `SpawnerModifier`  [EXTRACTED]
-  src/main/java/com/skd/ascendantspawners/compat/SpawnerCategory.java → src/main/java/com/skd/ascendantspawners/modifiers/SpawnerModifier.java
+- `SpawnerTile` --references--> `SpawnerStat`  [EXTRACTED]
+  src/main/java/com/skd/ascendantspawners/block/SpawnerTile.java → src/main/java/com/skd/ascendantspawners/stats/SpawnerStat.java
 
 ## Import Cycles
 - None detected.
@@ -88,19 +88,19 @@
 - **Project Overview** — .gitlab-ci.yml_publish-public, CHANGELOG.md_0.0.0-beta.5, README.md_ascendant-spawners [INFERRED]
 - **Dependencies for Ascendancy** — ascendant_spawners_common_toolkit, ascendant_spawners_apothic_spawners [EXTRACTED 1.00]
 
-## Communities (51 total, 15 thin omitted)
+## Communities (52 total, 15 thin omitted)
 
 ### Community 0 - "World Generation"
-Cohesion: 0.06
-Nodes (34): Biome, BiomeManager, ChunkAccess, ChunkSource, ChunkStatus, Context, DifficultyInstance, DimensionType (+26 more)
+Cohesion: 0.05
+Nodes (38): AABB, Biome, BiomeManager, ChunkAccess, ChunkSource, ChunkStatus, Context, DifficultyInstance (+30 more)
 
 ### Community 1 - "Recipe Management"
-Cohesion: 0.11
-Nodes (17): LegacyRecipeProvider, RecipeOutput, ASRecipeProvider, PackOutput, Recipe, getSerializedName(), Codec, MapCodec (+9 more)
+Cohesion: 0.09
+Nodes (24): LegacyRecipeProvider, RecipeOutput, ASRecipeProvider, PackOutput, Recipe, getSerializedName(), Codec, MapCodec (+16 more)
 
 ### Community 2 - "Spawner Behavior"
-Cohesion: 0.07
-Nodes (26): ContextAwarePredicate, Ints, ServerPlayer, SimpleCriterionTrigger, SimpleInstance, Codec, ModifierTrigger, TriggerInstance (+18 more)
+Cohesion: 0.08
+Nodes (17): SpawnerTile, BooleanStat, Codec, Component, Override, RegistryFriendlyByteBuf, StreamCodec, CustomStat (+9 more)
 
 ### Community 3 - "Event Handling"
 Cohesion: 0.09
@@ -111,8 +111,8 @@ Cohesion: 0.09
 Nodes (24): Client, FMLCommonSetupEvent, IBlockComponentProvider, IPluginConfig, ITooltip, Mod, NewRegistryEvent, Registry (+16 more)
 
 ### Community 5 - "Entity Spawning"
-Cohesion: 0.11
-Nodes (26): AABB, BaseSpawner, Either, EntitySpawnReason, EntityTypeTest, GameEvent, LightLayer, Mob (+18 more)
+Cohesion: 0.13
+Nodes (22): BaseSpawner, Either, EntitySpawnReason, Mob, SpawnData, SpawnerBlockEntity, BlockEntity, BlockPos (+14 more)
 
 ### Community 6 - "Data Providers"
 Cohesion: 0.12
@@ -135,7 +135,7 @@ Cohesion: 0.15
 Nodes (14): EntityTeleportEvent, ItemTooltipEvent, LivingDropsEvent, LivingExperienceDropEvent, MethodHandle, MobDespawnEvent, MobSplitEvent, OnDatapackSyncEvent (+6 more)
 
 ### Community 11 - "GUI Elements"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (13): GuiGraphicsExtractor, IDrawable, IFocusGroup, IGuiHelper, IRecipeCategory, IRecipeLayoutBuilder, IRecipeSlotsView, IRecipeType (+5 more)
 
 ### Community 13 - "SpawnerServerDataProvider.java"
@@ -183,19 +183,19 @@ Cohesion: 0.18
 Nodes (10): CurseForge — Variables del proyecto, Datos para el alta manual (formulario "Create Project"), Icono / imagen del proyecto, Nota, Proyecto, Rama, Tag, Tokens (+2 more)
 
 ### Community 29 - "Changelog — Ascendant Spawners"
-Cohesion: 0.11
-Nodes (18): 0.0.0-beta.1, 0.0.0-beta.1, 0.0.0-beta.2, 0.0.0-beta.2, 0.0.0-beta.3, 0.0.0-beta.3, 0.0.0-beta.4, 0.0.0-beta.4 (+10 more)
+Cohesion: 0.09
+Nodes (21): 0.0.0-beta.1, 0.0.0-beta.10, 0.0.0-beta.1, 0.0.0-beta.2, 0.0.0-beta.2, 0.0.0-beta.3, 0.0.0-beta.3, 0.0.0-beta.4 (+13 more)
 
 ### Community 30 - "CLAUDE.md — ascendant_spawners (26.2)"
 Cohesion: 0.50
 Nodes (3): CLAUDE.md — ascendant_spawners (26.2), Prioridad de instrucciones, Workflow del mod
 
 ### Community 48 - "BooleanStat"
-Cohesion: 0.27
-Nodes (6): BooleanStat, Codec, Component, Override, RegistryFriendlyByteBuf, StreamCodec
+Cohesion: 0.26
+Nodes (8): ContextAwarePredicate, Ints, ServerPlayer, SimpleCriterionTrigger, SimpleInstance, Codec, ModifierTrigger, TriggerInstance
 
 ## Knowledge Gaps
-- **76 isolated node(s):** `ADD`, `SET`, `Workflow del mod`, `Prioridad de instrucciones`, `0.0.0-beta.7` (+71 more)
+- **79 isolated node(s):** `ADD`, `SET`, `Workflow del mod`, `Prioridad de instrucciones`, `0.0.0-beta.10` (+74 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -203,16 +203,16 @@ Nodes (6): BooleanStat, Codec, Component, Override, RegistryFriendlyByteBuf, Str
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnerTile` connect `Spawner Behavior` to `Recipe Management`, `Event Handling`, `Mod Integration`, `Entity Spawning`, `Stat Management`, `Percentage Stat`, `BooleanStat`?**
-  _High betweenness centrality (0.182) - this node is a cross-community bridge._
-- **Why does `SpawnerStat` connect `Spawner Behavior` to `Recipe Management`, `Mod Integration`, `Entity Spawning`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
-- **Why does `SpawnerModifier` connect `Event Handling` to `Data Management`, `Spawner Behavior`, `GUI Elements`, `Recipe Management`?**
-  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+  _High betweenness centrality (0.179) - this node is a cross-community bridge._
+- **Why does `SpawnerStat` connect `Recipe Management` to `BooleanStat`, `Spawner Behavior`, `Mod Integration`, `Entity Spawning`?**
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+- **Why does `SpawnerModifier` connect `Event Handling` to `BooleanStat`, `Data Management`, `GUI Elements`, `Recipe Management`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **What connects `ADD`, `SET`, `Workflow del mod` to the rest of the system?**
-  _76 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _79 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `World Generation` be split into smaller, more focused modules?**
-  _Cohesion score 0.05860805860805861 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.054363796650014694 - nodes in this community are weakly interconnected._
 - **Should `Recipe Management` be split into smaller, more focused modules?**
-  _Cohesion score 0.11260504201680673 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08928571428571429 - nodes in this community are weakly interconnected._
 - **Should `Spawner Behavior` be split into smaller, more focused modules?**
-  _Cohesion score 0.06586538461538462 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0841813135985199 - nodes in this community are weakly interconnected._
