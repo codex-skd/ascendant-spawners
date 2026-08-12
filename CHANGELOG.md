@@ -1,5 +1,12 @@
 # Changelog — Ascendant Spawners
 
+
+## [0.0.0-beta.11] - 2026-08-12
+
+### Change
+
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `ascendant_spawners-26.2-neoforge-26.2.0.37-beta-0.0.0-beta.11.jar` (se añade la versión de cargador/NeoForge al nombre del archivo). Empaquetado y documentación; sin cambios de funcionalidad.
+
 ## 0.0.0-beta.10
 
 - **Endurecimiento de seguridad**: Agregados null-checks en `SpawnerJEIPlugin` para evitar potencial `NullPointerException` al acceder a contexto de nivel cliente. Todas las llamadas opcionales a Minecraft API ahora protegen correctamente contra valores null.
