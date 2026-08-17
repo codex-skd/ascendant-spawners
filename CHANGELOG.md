@@ -1,6 +1,12 @@
 # Changelog — Ascendant Spawners
 
 
+## [0.0.0-beta.12] - 2026-08-17
+
+### Change
+
+- **Traducciones al español**: añadido archivo `es_es.json` con traducciones de objetos, encantamientos, estadísticas, información y logros (advancements) al español.
+
 ## [0.0.0-beta.11] - 2026-08-12
 
 ### Change
