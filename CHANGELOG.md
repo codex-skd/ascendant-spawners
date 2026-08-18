@@ -1,6 +1,15 @@
 # Changelog — Ascendant Spawners
 
 
+
+## [0.0.0-beta.13] - 2026-08-18
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `ascendant_spawners-26.2-neoforge-26.2.0.45-beta-0.0.0-beta.13.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_ASCENDANT_SPAWNERS_26-2.md` para reflejar la nueva rama de trabajo.
+
 ## [0.0.0-beta.12] - 2026-08-17
 
 ### Change

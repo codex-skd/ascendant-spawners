@@ -13,7 +13,10 @@
 | Clase principal | `AscendantSpawners` |
 | Display name (Title Case) | `Ascendant Spawners` |
 | Versiones de Minecraft | `26.2` |
-| Rama | `minecraft/26.2/neoforge-26.2.0.32-beta/production` |
+| Rama | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
+
+| Última versión publicada | `0.0.0-beta.13` (CurseForge file ID TBD) |
+| Estado | ✅ Release estable 0.0.0-beta.13 |
 
 ### Notas específicas de este mod
 
@@ -66,7 +69,7 @@ Cada subida a CurseForge crea tag: beta `<mc>-neoforge-beta.X` · release `<mc>-
 **1. Desarrollo**
 
 ```bash
-git checkout minecraft/26.2/neoforge-26.2.0.32-beta/production
+git checkout minecraft/26.2/neoforge-26.2.0.45-beta/production
 ./gradlew.bat build
 git add -A
 git commit -m "feat: <descripción>
