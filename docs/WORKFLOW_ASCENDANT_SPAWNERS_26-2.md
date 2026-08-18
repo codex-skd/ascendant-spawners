@@ -15,7 +15,7 @@
 | Versiones de Minecraft | `26.2` |
 | Rama | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
 
-| Última versión publicada | `0.0.0-beta.13` (CurseForge file ID TBD) |
+| Última versión publicada | `0.0.0-beta.13` (CurseForge file ID 8678249) |
 | Estado | ✅ Release estable 0.0.0-beta.13 |
 
 ### Notas específicas de este mod
