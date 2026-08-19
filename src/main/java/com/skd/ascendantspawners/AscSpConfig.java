@@ -23,7 +23,7 @@ public class AscSpConfig {
     public static int entityDespawnDelay;
 
     public static void load() {
-        File configDir = new File(FMLPaths.CONFIGDIR.get().toFile(), "ascendant_spawners");
+        File configDir = new File(new File(FMLPaths.CONFIGDIR.get().toFile(), "ascendant"), "spawners");
         Configuration config = new Configuration(new File(configDir, "ascendant_spawners.cfg"));
         config.setTitle("Ascendant Spawner Module Configuration");
         spawnerSilkLevel = config.getInt(
