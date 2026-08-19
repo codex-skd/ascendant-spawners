@@ -2,6 +2,12 @@
 
 
 
+## [1.0.0] - 2026-08-20
+
+### Change
+
+- **Primera release estable**: el mod pasa de beta a `1.0.0`, sin cambios funcionales respecto a `0.0.0-beta.14`.
+
 ## [0.0.0-beta.14] - 2026-08-20
 
 ### Change
