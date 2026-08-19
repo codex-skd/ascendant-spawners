@@ -2,6 +2,13 @@
 
 
 
+## [0.0.0-beta.14] - 2026-08-20
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Configuración unificada**: el archivo de configuración ahora se guarda en `config/ascendant/spawners/ascendant_spawners.cfg` en vez de `config/ascendant_spawners/ascendant_spawners.cfg`, para unificar todos los mods de la familia Ascendant bajo una carpeta común `config/ascendant/`.
+
 ## [0.0.0-beta.13] - 2026-08-18
 
 ### Change

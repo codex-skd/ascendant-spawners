@@ -13,7 +13,7 @@
 | Clase principal | `AscendantSpawners` |
 | Display name (Title Case) | `Ascendant Spawners` |
 | Versiones de Minecraft | `26.2` |
-| Rama | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
+| Rama | `minecraft/26.2/neoforge-26.2.0.57/production` |
 
 | Última versión publicada | `0.0.0-beta.13` (CurseForge file ID 8678249) |
 | Estado | ✅ Release estable 0.0.0-beta.13 |
@@ -22,7 +22,7 @@
 
 - **Es un port declarado**: de [ApothicSpawners](https://www.curseforge.com/minecraft/mc-mods/apothic-spawners) por Shadows_of_Fire (NeoForge 26.1.2 → 26.2), con todos los identificadores renombrados a la convención propia. Roadmap completo por fases: `docs/ROADMAP_ASCENDANT_SPAWNERS.md`.
 - **package**: `com.skd.ascendantspawners`
-- **Minecraft / NeoForge**: `26.2` / `26.2.0.32-beta` (heredado del esqueleto, no actualizar sin pedirlo explícitamente)
+- **Minecraft / NeoForge**: `26.2` / `26.2.0.57`
 - **Es módulo de Ascendant Equipment**: en el original, ApothicSpawners es el "Spawner Module of Apotheosis". Aquí Ascendant Spawners es el módulo de spawners de **Ascendant Equipment** (`ascendant_equipment/neoforge/26.2`, nuestro port de Apotheosis) y depende de **Common Toolkit** (`common_toolkit/neoforge/26.2`, nuestro port de Placebo — dependencia obligatoria del original vía `placebo`).
 - **Referencia en `lib_ext/`**: `ApothicSpawners-26.1.2-2.0.1.jar` (compilado, sin fuente). Se decompila en Fase 0 a `temp/apothic-spawners-src/` (no versionado) como base de lectura para portar clase a clase. `lib_ext/` y `temp/` no se versionan (ver `.gitignore`).
 - **Dependencia de compilación real**: `libs/common_toolkit-26.2-neoforge-0.0.0-beta.1.jar` (versionado, ver `build.gradle`). Ascendant Equipment aún no tiene JAR — añadir a `libs/` en cuanto lo tenga.
