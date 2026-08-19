@@ -1,7 +1,7 @@
 {
   "build.gradle": {
-    "mtime": 1785971569.0586634,
-    "ast_hash": "0056d6733ca86ce39ae064acb31ddf3f",
+    "mtime": 1786569058.4351587,
+    "ast_hash": "0ab1b4236911f4cd9f7c2eeeff736a80",
     "semantic_hash": ""
   },
   "gradlew": {
@@ -190,9 +190,9 @@
     "semantic_hash": "050a25f0ed238da5b8c599d438d8c87b"
   },
   "src/main/java/com/skd/ascendantspawners/AscSpConfig.java": {
-    "mtime": 1785847223.316589,
-    "ast_hash": "5b2096a2d642cb17a662a8ed66b7ead6",
-    "semantic_hash": "5b2096a2d642cb17a662a8ed66b7ead6"
+    "mtime": 1787179523.3829534,
+    "ast_hash": "639541f5fe1e6b84a85072d4e295c632",
+    "semantic_hash": ""
   },
   "src/main/java/com/skd/ascendantspawners/AscSpEvents.java": {
     "mtime": 1785847215.0499585,
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1786055234.0685573,
-    "ast_hash": "e84a19dc3f232caac31bca6061111268",
+    "mtime": 1787179523.3812463,
+    "ast_hash": "b422733e174286c0f72af18aa373eeab",
     "semantic_hash": ""
   },
   "README.md": {
@@ -470,18 +470,18 @@
     "semantic_hash": ""
   },
   "docs/WORKFLOW_ASCENDANT_SPAWNERS_26-2.md": {
-    "mtime": 1785805592.2086115,
-    "ast_hash": "b71c9e1e7a3e3792e1f600617411cc30",
+    "mtime": 1787179568.8232865,
+    "ast_hash": "5122ad7592a822f78ccaa05d1f370a8e",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785805605.900704,
-    "ast_hash": "c0fb409156b28f15305a5ff18ad0b786",
+    "mtime": 1786567703.2859652,
+    "ast_hash": "68ee97fe8685554510377432f1804982",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785807676.236877,
-    "ast_hash": "a262a5831499d3637e6fe92cad903e24",
+    "mtime": 1787179523.3819537,
+    "ast_hash": "e0901d2c0f9cc6d18b1cb28dd3fdd521",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -527,6 +527,31 @@
   "docs/curseforge/versions/0.0.0-beta.10.md": {
     "mtime": 1786055218.498636,
     "ast_hash": "efbbed8e563e890c36ba410f3c5c8fd3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/ascendant_spawners/lang/es_es.json": {
+    "mtime": 1786968639.8751745,
+    "ast_hash": "6f3964b9238f0f6be1b14f5e793663b4",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.11.md": {
+    "mtime": 1786569058.4492285,
+    "ast_hash": "e8edf695058b20de7ed0f0b3ae3faa22",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.12.md": {
+    "mtime": 1787067760.8813443,
+    "ast_hash": "67954e3eec55cb144f1416afd53c2fe4",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.13.md": {
+    "mtime": 1787067383.854784,
+    "ast_hash": "c4ecf260539568d00c286ff28e4dafa2",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.14.md": {
+    "mtime": 1787179546.996303,
+    "ast_hash": "172a0bf8f05a86082573f648d92250fb",
     "semantic_hash": ""
   }
 }
