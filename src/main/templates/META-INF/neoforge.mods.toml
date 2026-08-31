@@ -1,0 +1,138 @@
+# This is an example neoforge.mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+
+# The loader this mod is for. javafml is the standard Java mod loader for NeoForge.
+modLoader="javafml" #mandatory
+
+# A version range to match for the FML loader.
+loaderVersion="${loader_version_range}" #mandatory
+
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="${mod_license}"
+
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+
+# The modid of the mod
+modId="${mod_id}" #mandatory
+
+# The version number of the mod
+version="${mod_version}" #mandatory
+
+# A display name for the mod
+displayName="${mod_name}" #mandatory
+
+# A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+
+# A URL for the "homepage" for this mod, displayed in the mod UI
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="assets/${mod_id}/icon.png" #optional
+
+# A text field displayed in the mod UI
+credits="Re-fork of Apothic Spawners 1.21 by Shadows_of_Fire / Stormraven Studios (MIT). Spawner module of Ascendant Equipment." #optional
+
+# The authors of the mod, displayed in the mod UI (optional)
+#authors=""
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+Ascendant Spawners is a port of ApothicSpawners by Shadows_of_Fire, with all identifiers renamed to this project's convention. This 1.21.1 build is a re-fork from the upstream Apothic Spawners 1.21 sources. Not affiliated with or endorsed by the original author.
+
+The spawner module of Ascendant Equipment, allowing for silk-touching and modification of mob spawners.
+'''
+
+# The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+# The [[accessTransformers]] block allows you to declare where your AT file is.
+# If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
+#[[accessTransformers]]
+#file="META-INF/accesstransformer.cfg"
+
+# The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.${mod_id}]] #optional
+    # the modid of the dependency
+    modId="neoforge" #mandatory
+    # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
+    # 'required' requires the mod to exist, 'optional' does not
+    # 'incompatible' will prevent the game from loading when the mod exists, and 'discouraged' will show a warning
+    type="required" #mandatory
+    # Optional field describing why the dependency is required or why it is incompatible
+    # reason="..."
+    # The version range of the dependency
+    versionRange="[${neo_version},)" #mandatory
+    # An ordering relationship for the dependency.
+    # BEFORE - This mod is loaded BEFORE the dependency
+    # AFTER - This mod is loaded AFTER the dependency
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT, or SERVER
+    side="BOTH"
+
+# Here's another dependency
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    # This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# Common Toolkit — port of Placebo by Shadows_of_Fire, required by the original ApothicSpawners (as "placebo").
+# versionRange lower bound is the dependency's current beta, not "0.0.0": Maven-style version
+# comparison (used by NeoForge) ranks qualifiers alpha < beta < milestone < rc < snapshot < (numeric),
+# so "0.0.0-beta.1" sorts BELOW "0.0.0". A bare "[0.0.0,)" would reject every beta build.
+[[dependencies.${mod_id}]]
+    modId="common_toolkit"
+    type="required"
+    reason="Port of the original ApothicSpawners dependency on Placebo."
+    versionRange="[0.0.0-beta.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Ascendant Equipment — port of Apotheosis by Shadows_of_Fire. Ascendant Spawners is its spawner module.
+# Optional dependency kept WITHOUT an ordering constraint: Ascendant Equipment declares this mod with
+# ordering="AFTER", so an "AFTER" here would create a mutual ordering cycle and fail mod sorting.
+# The versionRange floor is its current beta (prerelease handling as above). Flip to "required" once
+# this mod actually integrates with Ascendant Equipment's API (still without a reciprocal ordering).
+[[dependencies.${mod_id}]]
+    modId="ascendant_equipment"
+    type="optional"
+    reason="Ascendant Spawners is the spawner module of Ascendant Equipment (port of ApothicSpawners, module of Apotheosis)."
+    versionRange="[0.0.0-beta.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+# JEI — optional compat (recipe viewer integration).
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="[19.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Jade — optional compat (block tooltip overlay).
+[[dependencies.${mod_id}]]
+    modId="jade"
+    type="optional"
+    versionRange="[15.0.0,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+# Features are specific properties of the game environment, that you may want to declare you require. This example declares
+# that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
+# stop your mod loading on the server for example.
+#[features.${mod_id}]
+#openGLVersion="[3.2,)"

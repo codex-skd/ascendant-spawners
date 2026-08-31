@@ -1,0 +1,11 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:clock"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:max_delay",
+		"value": -20,
+		"min": 20
+	}]
+}

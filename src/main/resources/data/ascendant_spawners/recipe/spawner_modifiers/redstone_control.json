@@ -1,0 +1,10 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:comparator"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:redstone_control",
+		"value": true
+	}]
+}

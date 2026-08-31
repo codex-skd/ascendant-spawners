@@ -1,0 +1,34 @@
+package com.skd.ascendantspawners.stats;
+
+import java.util.Optional;
+
+import com.mojang.serialization.Codec;
+
+import com.skd.ascendantspawners.block.AscendantSpawnerTile;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+
+public class BooleanStat extends CustomStat<Boolean> {
+
+    public BooleanStat(Boolean defaultValue) {
+        super(defaultValue);
+    }
+
+    @Override
+    public Codec<Boolean> getValueCodec() {
+        return Codec.BOOL;
+    }
+
+    @Override
+    public Component getTooltipImpl(AscendantSpawnerTile spawner) {
+        return this.name().withStyle(ChatFormatting.DARK_GREEN);
+    }
+
+    @Override
+    public boolean applyModifier(AscendantSpawnerTile spawner, Boolean value, Optional<Boolean> min, Optional<Boolean> max) {
+        boolean old = this.getValue(spawner);
+        this.setValue(spawner, value);
+        return old != this.getValue(spawner);
+    }
+
+}

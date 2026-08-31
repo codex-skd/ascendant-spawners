@@ -1,0 +1,114 @@
+{
+    "item.ascendant_spawners.spawner": "%s刷怪笼",
+
+    "enchantment.ascendant_spawners.capturing": "捕捉",
+    "enchantment.ascendant_spawners.capturing.desc": "使生物死亡时有概率掉落自身刷怪蛋。",
+
+    "misc.ascendant_spawners.concat": "%s %s",
+    "misc.ascendant_spawners.value_concat": "%s: %s",
+    "misc.ascendant_spawners.min_value": "最小值：%s",
+    "misc.ascendant_spawners.max_value": "最大值：%s",
+    "misc.ascendant_spawners.mainhand": "主手持有",
+    "misc.ascendant_spawners.offhand": "副手持有",
+    "misc.ascendant_spawners.not_consumed": "该物品不会被消耗",
+    "misc.ascendant_spawners.rclick_spawner": "右击刷怪笼",
+    "misc.ascendant_spawners.entity": "实体",
+    "misc.ascendant_spawners.shift_stats": "按住Shift查看数据",
+    "misc.ascendant_spawners.ctrl_stats": "按住Ctrl查看数据",
+    "misc.ascendant_spawners.banned": "不能用于刷怪笼",
+    "misc.ascendant_spawners.on": "%s：开",
+    "misc.ascendant_spawners.off": "%s：关",
+    
+    "stat.ascendant_spawners.min_delay": "最小生成延迟",
+    "stat.ascendant_spawners.min_delay.desc": "生物生成的最短间隔刻",
+    
+    "stat.ascendant_spawners.max_delay": "最大生成延迟",
+    "stat.ascendant_spawners.max_delay.desc": "生物生成的最长间隔刻",
+    
+    "stat.ascendant_spawners.spawn_count": "生成数量",
+    "stat.ascendant_spawners.spawn_count.desc": "单次生成的实体数量",
+    
+    "stat.ascendant_spawners.max_nearby_entities": "最大实体数量",
+    "stat.ascendant_spawners.max_nearby_entities.desc": "附近允许存在的最大实体数量",
+    
+    "stat.ascendant_spawners.req_player_range": "激活范围",
+    "stat.ascendant_spawners.req_player_range.desc": "玩家离开多远刷怪笼不再生成生物",
+    
+    "stat.ascendant_spawners.spawn_range": "生成范围",
+    "stat.ascendant_spawners.spawn_range.desc": "生成范围半径（以方块为单位）",
+    
+    "stat.ascendant_spawners.ignore_players": "忽略玩家",
+    "stat.ascendant_spawners.ignore_players.desc": "刷怪笼附近不需要玩家",
+    
+    "stat.ascendant_spawners.ignore_conditions": "忽略环境",
+    "stat.ascendant_spawners.ignore_conditions.desc": "刷怪笼忽略生成环境限制",
+    
+    "stat.ascendant_spawners.redstone_control": "红石控制",
+    "stat.ascendant_spawners.redstone_control.desc": "刷怪笼需要红石激活",
+    
+    "stat.ascendant_spawners.ignore_light": "忽略光照",
+    "stat.ascendant_spawners.ignore_light.desc": "刷怪笼忽略光照等级",
+    
+    "stat.ascendant_spawners.no_ai": "无AI",
+    "stat.ascendant_spawners.no_ai.desc": "生成的生物无AI",
+    
+    "stat.ascendant_spawners.silent": "静音",
+    "stat.ascendant_spawners.silent.desc": "生成的生物不会发出声音",
+    
+    "stat.ascendant_spawners.youthful": "幼年",
+    "stat.ascendant_spawners.youthful.desc": "若可能，刷怪笼总是生成幼年实体",
+
+    "stat.ascendant_spawners.initial_health": "初始生命值",
+    "stat.ascendant_spawners.initial_health.desc": "生成生物的初始生命值百分比",
+
+    "stat.ascendant_spawners.burning": "燃烧",
+    "stat.ascendant_spawners.burning.desc": "生成的生物会被点燃",
+
+    "stat.ascendant_spawners.echoing": "回响",
+    "stat.ascendant_spawners.echoing.desc": "生成的生物会掉落额外战利品，随等级增加",
+
+    "title.ascendant_spawners.spawner": "刷怪笼调节器",
+    "info.ascendant_spawners.spawner": "可使用各种物品修改刷怪笼的属性，并使用%s魔咒收集刷怪笼。",
+    "info.ascendant_spawners.spawner.no_silk": "可使用各种物品修改刷怪笼的属性，但使用精准采集魔咒收集刷怪笼已被禁用。",
+    "info.ascendant_spawners.spawner.always_drop": "使用各种物品修改刷怪笼的属性，并在破坏刷怪笼时总会掉落自身。",
+    "info.ascendant_spawners.capturing": "捕捉魔咒能使生物死亡时有概率掉落自身刷怪蛋。\\n \\n掉落概率：%s%% 每级",
+
+    "config.jade.plugin_ascendant_spawners.spawner": "神化刷怪笼",
+
+    "advancements.ascendant_spawners.spawner.root": "神化刷怪笼",
+    "advancements.ascendant_spawners.spawner.root.desc": "刷怪笼可被收集并修改属性，更多信息可查看JEI。",
+    "advancements.ascendant_spawners.spawner": "神化刷怪笼",
+    "advancements.ascendant_spawners.spawner.desc": "使用精准采集魔咒获得一个生物的刷怪笼。",
+    "advancements.ascendant_spawners.capturing": "捉住了！",
+    "advancements.ascendant_spawners.capturing.desc": "使用捕捉魔咒获得一个生物的刷怪蛋。",
+    "advancements.ascendant_spawners.modifier": "只是一些技术性调整……",
+    "advancements.ascendant_spawners.modifier.desc": "使用调节器更改刷怪笼的属性。",
+    "advancements.ascendant_spawners.spawncount": "他的尺寸真是太大了！",
+    "advancements.ascendant_spawners.spawncount.desc": "将刷怪笼的生成数量增加至16",
+    "advancements.ascendant_spawners.maxdelay": "时间扭曲刷怪笼",
+    "advancements.ascendant_spawners.maxdelay.desc": "将刷怪笼的最大生成延迟减少至20",
+    "advancements.ascendant_spawners.mindelay": "我是最快的",
+    "advancements.ascendant_spawners.mindelay.desc": "将刷怪笼的最小生成延迟减少至20",
+    "advancements.ascendant_spawners.nearbyents": "成群结队",
+    "advancements.ascendant_spawners.nearbyents.desc": "将刷怪笼的最大实体数量增加至32",
+    "advancements.ascendant_spawners.playerrange": "远眺敌军",
+    "advancements.ascendant_spawners.playerrange.desc": "将刷怪笼的激活范围增加至48",
+    "advancements.ascendant_spawners.spawnrange": "绵延数里",
+    "advancements.ascendant_spawners.spawnrange.desc": "将刷怪笼的刷怪范围增加至32",
+    "advancements.ascendant_spawners.conditions": "未核查生成",
+    "advancements.ascendant_spawners.conditions.desc": "禁用刷怪笼生成环境限制",
+    "advancements.ascendant_spawners.players": "工厂就绪",
+    "advancements.ascendant_spawners.players.desc": "禁用刷怪笼附近玩家需求",
+    "advancements.ascendant_spawners.redstone": "安装开关",
+    "advancements.ascendant_spawners.redstone.desc": "开启刷怪笼红石控制",
+    "advancements.ascendant_spawners.light": "谁需要黑暗？",
+    "advancements.ascendant_spawners.light.desc": "使刷怪笼在任何光照等级下都能工作",
+    "advancements.ascendant_spawners.noai": "大脑外流",
+    "advancements.ascendant_spawners.noai.desc": "禁用刷怪笼生成实体的AI",
+    "advancements.ascendant_spawners.ultimate_spawner": "究极刷怪笼",
+    "advancements.ascendant_spawners.ultimate_spawner.desc": "制作出一个有最小生成延迟、能用红石控制、生成实体无AI、忽略生成环境与玩家的刷怪笼。",
+
+    "enchantment.level.0": "0",
+
+    "emi.category.ascendant_spawners.spawner": "刷怪笼调节器"
+}

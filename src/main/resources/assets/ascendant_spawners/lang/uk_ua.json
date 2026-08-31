@@ -1,0 +1,114 @@
+{
+    "item.ascendant_spawners.spawner": "Породжувач (%s)",
+
+    "enchantment.ascendant_spawners.capturing": "Захоплення",
+    "enchantment.ascendant_spawners.capturing.desc": "Дає шанс отримати з моба його яйце виклику.",
+
+    "misc.ascendant_spawners.concat": "%s %s",
+    "misc.ascendant_spawners.value_concat": "%s: %s",
+    "misc.ascendant_spawners.min_value": "Мін. значення: %s",
+    "misc.ascendant_spawners.max_value": "Макс. значення: %s",
+    "misc.ascendant_spawners.mainhand": "Тримається в основній руці",
+    "misc.ascendant_spawners.offhand": "Тримається в іншій руці",
+    "misc.ascendant_spawners.not_consumed": "Цей предмет не витрачається",
+    "misc.ascendant_spawners.rclick_spawner": "Клацніть ПКМ по породжувачу",
+    "misc.ascendant_spawners.entity": "Істота",
+    "misc.ascendant_spawners.shift_stats": "Утримуйте Shift, щоби побачити характеристики",
+    "misc.ascendant_spawners.ctrl_stats": "Утримуйте Ctrl, щоби побачити характеристики",
+    "misc.ascendant_spawners.banned": "Не можна використовувати на породжувачі",
+    "misc.ascendant_spawners.on": "%s: Увімкнено",
+    "misc.ascendant_spawners.off": "%s: Вимкнено",
+    
+    "stat.ascendant_spawners.min_delay": "Мін. затримка породження",
+    "stat.ascendant_spawners.min_delay.desc": "Мінімальна кількість тактів між спавнами",
+    
+    "stat.ascendant_spawners.max_delay": "Макс. затримка породження",
+    "stat.ascendant_spawners.max_delay.desc": "Максимальна кількість тактів між спавнами",
+    
+    "stat.ascendant_spawners.spawn_count": "Обсяг породження",
+    "stat.ascendant_spawners.spawn_count.desc": "Кількість істот, що з’являються одночасно",
+    
+    "stat.ascendant_spawners.max_nearby_entities": "Максимум істот",
+    "stat.ascendant_spawners.max_nearby_entities.desc": "Загальна кількість істот, що можуть перебувати поблизу",
+    
+    "stat.ascendant_spawners.req_player_range": "Радіус активації",
+    "stat.ascendant_spawners.req_player_range.desc": "На якій відстані від гравця може бути спавн, перш ніж він припинить спавн",
+    
+    "stat.ascendant_spawners.spawn_range": "Дистанція породження",
+    "stat.ascendant_spawners.spawn_range.desc": "Радіус, у якому моби можуть спавнитись",
+    
+    "stat.ascendant_spawners.ignore_players": "Ігнорування гравців",
+    "stat.ascendant_spawners.ignore_players.desc": "Породжувач не потребує гравця поблизу",
+    
+    "stat.ascendant_spawners.ignore_conditions": "Ігнорування умов",
+    "stat.ascendant_spawners.ignore_conditions.desc": "Породжувач ігнорує умови породження",
+    
+    "stat.ascendant_spawners.redstone_control": "Редстоуновий контроль",
+    "stat.ascendant_spawners.redstone_control.desc": "Породжувач потребує редстоунового заживлення для активації",
+    
+    "stat.ascendant_spawners.ignore_light": "Ігнорування світла",
+    "stat.ascendant_spawners.ignore_light.desc": "Породжувач ігнорує рівень освітлення",
+    
+    "stat.ascendant_spawners.no_ai": "Без штучного інтелекту",
+    "stat.ascendant_spawners.no_ai.desc": "Породжені істоти не матимуть штучного інтелекту",
+    
+	"stat.ascendant_spawners.silent": "Без шуму",
+	"stat.ascendant_spawners.silent.desc": "Породжені істоти не видаватимуть шуму",
+    
+	"stat.ascendant_spawners.youthful": "Молодість",
+	"stat.ascendant_spawners.youthful.desc": "Породжувач за можливості буде породжувати дитинча істоти",
+
+	"stat.ascendant_spawners.initial_health": "Початковий рівень здоров’я",
+	"stat.ascendant_spawners.initial_health.desc": "Початковий рівень здоров’я породжених істот",
+
+	"stat.ascendant_spawners.burning": "Запалювання",
+	"stat.ascendant_spawners.burning.desc": "Породжені істоти спалахуватимуть у вогні",
+
+	"stat.ascendant_spawners.echoing": "Відлуння",
+	"stat.ascendant_spawners.echoing.desc": "Породжені істоти скидатимуть додатковий дроп залежно від рівня модифікатора",
+
+    "title.ascendant_spawners.spawner": "Модифікація породжувачів",
+    "info.ascendant_spawners.spawner": "Породжувачі можна модифікувати за допомогою різних предметів, які можна збирати за допомогою %.",
+    "info.ascendant_spawners.spawner.no_silk": "Породжувачі можна модифікувати за допомогою різних предметів, але збір за допомогою Шовкового дотику наразі вимкнено.",
+    "info.ascendant_spawners.spawner.always_drop": "Породжувачі можна модифікувати за допомогою різних предметів, і вони завжди падають, коли їх розбивають.",
+    "info.ascendant_spawners.capturing": "Чари захоплення дають монстрам шанс скинути яйце.\\n \\nЧастота випадіння: %s%% за рівень",
+
+    "config.jade.plugin_ascendant_spawners.spawner": "Apothic Spawners",
+
+    "advancements.ascendant_spawners.spawner.root": "Apothic Spawners",
+    "advancements.ascendant_spawners.spawner.root.desc": "Породжувачі можна добувати та модифікувати, дивіться переглядач рецептів для подробиць.",
+    "advancements.ascendant_spawners.spawner": "Апофеотичні породжувачі",
+    "advancements.ascendant_spawners.spawner.desc": "Отримайте породжувач мобів за допомогою Шовкового дотику.",
+    "advancements.ascendant_spawners.capturing": "Спіймався!",
+    "advancements.ascendant_spawners.capturing.desc": "Отримайте яйце виклику моба за допомогою чар Захоплення",
+    "advancements.ascendant_spawners.modifier": "Лише кілька змін…",
+    "advancements.ascendant_spawners.modifier.desc": "Застосуйте модифікатор, щоб змінити характеристики породжувача.",
+    "advancements.ascendant_spawners.spawncount": "Який здоровенний у тебе породжувач!",
+    "advancements.ascendant_spawners.spawncount.desc": "Підвищте кількість породжень породжувача до 16",
+    "advancements.ascendant_spawners.maxdelay": "Породжувач, що викривляє час",
+    "advancements.ascendant_spawners.maxdelay.desc": "Зменште максимальну затримку породжень породжувача до 20",
+    "advancements.ascendant_spawners.mindelay": "Я — швидкість",
+    "advancements.ascendant_spawners.mindelay.desc": "Зменште мінімальну затримку породжень породжувача до 20",
+    "advancements.ascendant_spawners.nearbyents": "Заснування орди",
+    "advancements.ascendant_spawners.nearbyents.desc": "Підвищте обмежувач сутностей біля породжувача до 32",
+    "advancements.ascendant_spawners.playerrange": "Бій з тилу",
+    "advancements.ascendant_spawners.playerrange.desc": "Підвищте діапазон активації породжувача гравцем до 48",
+    "advancements.ascendant_spawners.spawnrange": "З далеких далеч",
+    "advancements.ascendant_spawners.spawnrange.desc": "Підвищте діапазон породжень породжувача до 32",
+    "advancements.ascendant_spawners.conditions": "Неперевірений спавн",
+    "advancements.ascendant_spawners.conditions.desc": "Позбавтеся умов породжень породжувача",
+    "advancements.ascendant_spawners.players": "Готовий до промислового виробництва",
+    "advancements.ascendant_spawners.players.desc": "Вимкніть породжувачу потребу у гравцях поруч",
+    "advancements.ascendant_spawners.redstone": "А яке стоп-слово?",
+    "advancements.ascendant_spawners.redstone.desc": "Додайте редстоуновий контроль до породжувача",
+    "advancements.ascendant_spawners.light": "Кому потрібна ця темрява?",
+    "advancements.ascendant_spawners.light.desc": "Дайте можливість породжувачу працювати при будь-якому рівні освітлення.",
+    "advancements.ascendant_spawners.noai": "Зомбоящик",
+    "advancements.ascendant_spawners.noai.desc": "Позбавте ШІ мобів з породжувача.",
+    "advancements.ascendant_spawners.ultimate_spawner": "Ультимативний породжувач",
+    "advancements.ascendant_spawners.ultimate_spawner.desc": "Створіть породжувач із мінімальними затримками, редстоуновим контролем, видаленим ШІ та ігноруванням умов і гравців.",
+
+    "enchantment.level.0": "0",
+
+    "emi.category.ascendant_spawners.spawner": "Модифікація породжувачів"
+}

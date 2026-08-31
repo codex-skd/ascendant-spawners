@@ -1,0 +1,114 @@
+{
+    "item.ascendant_spawners.spawner": "Рассадник %s",
+	
+    "enchantment.ascendant_spawners.capturing": "Захват",
+    "enchantment.ascendant_spawners.capturing.desc": "Даёт шанс добыть с существ их яйцо призыва.",
+
+    "misc.ascendant_spawners.concat": "%s %s",
+    "misc.ascendant_spawners.value_concat": "%s: %s",
+    "misc.ascendant_spawners.min_value": "Мин. значение: %s",
+    "misc.ascendant_spawners.max_value": "Макс. значение: %s",
+    "misc.ascendant_spawners.mainhand": "Держать в основной руке",
+    "misc.ascendant_spawners.offhand": "Держать во второй руке",
+    "misc.ascendant_spawners.not_consumed": "Этот предмет не расходуется",
+    "misc.ascendant_spawners.rclick_spawner": "ПКМ по рассаднику",
+    "misc.ascendant_spawners.entity": "Сущность",
+    "misc.ascendant_spawners.shift_stats": "Удерживайте Shift для стат-ки",
+    "misc.ascendant_spawners.ctrl_stats": "Удерживайте Ctrl для стат-ки",
+    "misc.ascendant_spawners.banned": "Не используется на рассаднике",
+	"misc.ascendant_spawners.on": "%s: Вкл",
+    "misc.ascendant_spawners.off": "%s: Выкл",
+    
+    "stat.ascendant_spawners.min_delay": "Мин. задержка призыва",
+    "stat.ascendant_spawners.min_delay.desc": "Минимальное число тиков между призывами",
+	
+    "stat.ascendant_spawners.max_delay": "Макс. задержка призыва",
+    "stat.ascendant_spawners.max_delay.desc": "Максимальное число тиков между призывами",
+	
+    "stat.ascendant_spawners.spawn_count": "Кол-во призывов",
+    "stat.ascendant_spawners.spawn_count.desc": "Число призываемых сущностей за раз",
+	
+    "stat.ascendant_spawners.max_nearby_entities": "Макс. сущностей",
+    "stat.ascendant_spawners.max_nearby_entities.desc": "Общее число сущностей находящихся около рассадника",
+	
+    "stat.ascendant_spawners.req_player_range": "Дальность активации",
+    "stat.ascendant_spawners.req_player_range.desc": "Как далеко игрок может быть до остановки призывов",
+	
+    "stat.ascendant_spawners.spawn_range": "Дальность призыва",
+    "stat.ascendant_spawners.spawn_range.desc": "Радиус (в блоках) в котором могут призваться существа",
+	
+    "stat.ascendant_spawners.ignore_players": "Игнорирует игроков",
+    "stat.ascendant_spawners.ignore_players.desc": "Рассаднику не требуется игрок поблизости",
+	
+    "stat.ascendant_spawners.ignore_conditions": "Игнорирует правила",
+    "stat.ascendant_spawners.ignore_conditions.desc": "Рассадник игнорирует правила призыва",
+	
+    "stat.ascendant_spawners.redstone_control": "Редстоун контроль",
+    "stat.ascendant_spawners.redstone_control.desc": "Требовать редстоун для активации рассадника",
+	
+    "stat.ascendant_spawners.ignore_light": "Игнорирует свет",
+    "stat.ascendant_spawners.ignore_light.desc": "Рассадник игнорирует яркость света",
+	
+    "stat.ascendant_spawners.no_ai": "Без ИИ",
+    "stat.ascendant_spawners.no_ai.desc": "У призванных сущностей отсустсвует ИИ",
+	
+    "stat.ascendant_spawners.silent": "Тихий",
+	"stat.ascendant_spawners.silent.desc": "Призванные сущности не издают звуков",
+	
+    "stat.ascendant_spawners.baby": "Юный",
+	"stat.ascendant_spawners.youthful.desc": "Призванные сущности всегда будут детьми, если это возможно",
+	
+    "stat.ascendant_spawners.initial_health": "Начальное здоровье",
+	"stat.ascendant_spawners.initial_health.desc": "Начальный процент здоровья призванных существ",
+	
+    "stat.ascendant_spawners.burning": "Горящий",
+	"stat.ascendant_spawners.burning.desc": "Призванные существа будут гореть",
+	
+    "stat.ascendant_spawners.echoing": "Отголосок",
+	"stat.ascendant_spawners.echoing.desc": "С призванных существ падает дополнительная добыча, увеличивается с уровнем",
+
+    "title.ascendant_spawners.spawner": "Модификации рассадника",
+    "info.ascendant_spawners.spawner": "Рассадники могут быть собраны с помощью %s и могут быть модифицированы с помощью различных предметов.",
+    "info.ascendant_spawners.spawner.no_silk": "Рассадники могут быть модифицированы с помощью различных предметов, но сбор с помощью шёлкового касания в настоящее время отключен.",
+    "info.ascendant_spawners.spawner.always_drop": "Рассадники могут быть модифицированы с помощью различных предметов и всегда будут выпадать при поломке.",
+    "info.ascendant_spawners.capturing": "Зачарование Захват даёт шанс на выпадение с существ их яиц призыва.\\n \\nШанс выпадения: %s%% за уровень",
+
+    "config.jade.plugin_ascendant_spawners.spawner": "Апофеозные рассадники",
+
+    "advancements.ascendant_spawners.spawner.root": "Апофеозные рассадники",
+    "advancements.ascendant_spawners.spawner.root.desc": "Рассадники можно собирать и модифицировать, см. JEI для получения информации.",
+    "advancements.ascendant_spawners.spawner": "Апофеозные рассадники",
+    "advancements.ascendant_spawners.spawner.desc": "Соберите рассадник с помощью шёлкового касания.",
+    "advancements.ascendant_spawners.capturing": "Захваченный!",
+    "advancements.ascendant_spawners.capturing.desc": "Получите яйцо призыва существа с помощью зачарования Захват",
+    "advancements.ascendant_spawners.modifier": "Всего лишь несколько настроек...",
+    "advancements.ascendant_spawners.modifier.desc": "Используйте модификатор призыва, чтобы изменить статы рассадника.",
+    "advancements.ascendant_spawners.spawncount": "Посмотрите на размер рассадника!",
+    "advancements.ascendant_spawners.spawncount.desc": "Увеличьте кол-во призванных в рассаднике до 16",
+    "advancements.ascendant_spawners.maxdelay": "Пространственно-временной рассадник",
+    "advancements.ascendant_spawners.maxdelay.desc": "Уменьшите максимальную задержку призыва рассадника до 20",
+    "advancements.ascendant_spawners.mindelay": "Я - скорость",
+    "advancements.ascendant_spawners.mindelay.desc": "Уменьшите минимальную задержку призыва рассадника до 20",
+    "advancements.ascendant_spawners.nearbyents": "Создание орды",
+    "advancements.ascendant_spawners.nearbyents.desc": "Увеличьте максимальное количество существ около рассадника до 32",
+    "advancements.ascendant_spawners.playerrange": "Вдали от боя",
+    "advancements.ascendant_spawners.playerrange.desc": "Увеличьте расстояние активации рассадника от игрока до 48",
+    "advancements.ascendant_spawners.spawnrange": "Существа за милями",
+    "advancements.ascendant_spawners.spawnrange.desc": "Увеличьте радиус призыва рассадника до 32",
+    "advancements.ascendant_spawners.conditions": "Неконтролируемый призыв",
+    "advancements.ascendant_spawners.conditions.desc": "Отключите правила призыва на рассаднике",
+    "advancements.ascendant_spawners.players": "Готов к работе на заводе",
+    "advancements.ascendant_spawners.players.desc": "Отключите необходимость присутствия игрока у рассадника",
+    "advancements.ascendant_spawners.redstone": "Добавление переключателя",
+    "advancements.ascendant_spawners.redstone.desc": "Включите редстоун контроль для рассадника",
+    "advancements.ascendant_spawners.light": "Кому нужна эта тьма?",
+    "advancements.ascendant_spawners.light.desc": "Позвольте рассаднику работать при любом освещении.",
+    "advancements.ascendant_spawners.noai": "Утечка мозгов",
+    "advancements.ascendant_spawners.noai.desc": "Выключите ИИ существ для рассадника.",
+    "advancements.ascendant_spawners.ultimate_spawner": "Универсальный рассадник",
+    "advancements.ascendant_spawners.ultimate_spawner.desc": "Создайте рассадник с минимальными задержками, что имеет редстоун контроль, без ИИ, игнорирует правила призыва и игроков.",
+
+    "enchantment.level.0": "0",
+
+    "emi.category.ascendant_spawners.spawner": "Модификация рассадника"
+}

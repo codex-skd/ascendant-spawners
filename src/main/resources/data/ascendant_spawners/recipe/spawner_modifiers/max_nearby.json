@@ -1,0 +1,11 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:ghast_tear"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:max_nearby_entities",
+		"value": 2,
+		"max": 32
+	}]
+}

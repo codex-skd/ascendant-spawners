@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "package": "com.skd.ascendantspawners.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "refmap": "ascendant_spawners.refmap.json",
+    "mixins": [
+        "BlocksMixin",
+        "ItemsMixin"
+    ],
+    "client": [
+    ],
+    "minVersion": "0.8"
+}

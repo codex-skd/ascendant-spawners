@@ -1,0 +1,114 @@
+{
+    "item.ascendant_spawners.spawner": "%s Spawner",
+
+    "enchantment.ascendant_spawners.capturing": "Capturing",
+    "enchantment.ascendant_spawners.capturing.desc": "Makes mobs have a chance to drop their spawn egg.",
+
+    "misc.ascendant_spawners.concat": "%s %s",
+    "misc.ascendant_spawners.value_concat": "%s: %s",
+    "misc.ascendant_spawners.min_value": "Min Value: %s",
+    "misc.ascendant_spawners.max_value": "Max Value: %s",
+    "misc.ascendant_spawners.mainhand": "Held in Main Hand",
+    "misc.ascendant_spawners.offhand": "Held in Off Hand",
+    "misc.ascendant_spawners.not_consumed": "This item is not consumed",
+    "misc.ascendant_spawners.rclick_spawner": "Right-Click the Spawner",
+    "misc.ascendant_spawners.entity": "Entity",
+    "misc.ascendant_spawners.shift_stats": "Hold Shift for Stats",
+    "misc.ascendant_spawners.ctrl_stats": "Hold Ctrl for Stats",
+    "misc.ascendant_spawners.banned": "Cannot be used on a Spawner",
+    "misc.ascendant_spawners.on": "%s: On",
+    "misc.ascendant_spawners.off": "%s: Off",
+    
+    "stat.ascendant_spawners.min_delay": "Min Spawn Delay",
+    "stat.ascendant_spawners.min_delay.desc": "The minimum number of ticks between spawns",
+    
+    "stat.ascendant_spawners.max_delay": "Max Spawn Delay",
+    "stat.ascendant_spawners.max_delay.desc": "The maximum number of ticks between spawns",
+    
+    "stat.ascendant_spawners.spawn_count": "Spawn Count",
+    "stat.ascendant_spawners.spawn_count.desc": "The number of entities spawned at once",
+    
+    "stat.ascendant_spawners.max_nearby_entities": "Max Entities",
+    "stat.ascendant_spawners.max_nearby_entities.desc": "The total number of entities allowed nearby",
+    
+    "stat.ascendant_spawners.req_player_range": "Activation Range",
+    "stat.ascendant_spawners.req_player_range.desc": "How far a player can be before spawning stops",
+    
+    "stat.ascendant_spawners.spawn_range": "Spawn Range",
+    "stat.ascendant_spawners.spawn_range.desc": "The radius (in blocks) that mobs can spawn in",
+    
+    "stat.ascendant_spawners.ignore_players": "Ignores Players",
+    "stat.ascendant_spawners.ignore_players.desc": "The spawner does not need a nearby player",
+    
+    "stat.ascendant_spawners.ignore_conditions": "Ignores Conditions",
+    "stat.ascendant_spawners.ignore_conditions.desc": "The spawner ignores spawn conditions",
+    
+    "stat.ascendant_spawners.redstone_control": "Redstone Control",
+    "stat.ascendant_spawners.redstone_control.desc": "The spawner requires redstone to activate",
+    
+    "stat.ascendant_spawners.ignore_light": "Ignores Light",
+    "stat.ascendant_spawners.ignore_light.desc": "The spawner ignores light levels",
+    
+    "stat.ascendant_spawners.no_ai": "No AI",
+    "stat.ascendant_spawners.no_ai.desc": "Spawned entities will have no AI",
+    
+	"stat.ascendant_spawners.silent": "Silent",
+	"stat.ascendant_spawners.silent.desc": "Spawned entities will make no noise",
+    
+	"stat.ascendant_spawners.youthful": "Youthful",
+	"stat.ascendant_spawners.youthful.desc": "The spawner will always spawn a baby entity when possible",
+
+	"stat.ascendant_spawners.initial_health": "Initial Health",
+	"stat.ascendant_spawners.initial_health.desc": "The initial health percentage of spawned mobs",
+
+	"stat.ascendant_spawners.burning": "Burning",
+	"stat.ascendant_spawners.burning.desc": "Spawned mobs will be set on fire",
+
+	"stat.ascendant_spawners.echoing": "Echoing",
+	"stat.ascendant_spawners.echoing.desc": "Spawned mobs will drop extra loot, increasing with level",
+
+    "title.ascendant_spawners.spawner": "Spawner Modification",
+    "info.ascendant_spawners.spawner": "Spawners may be modified with various items, and can be collected with %s.",
+    "info.ascendant_spawners.spawner.no_silk": "Spawners may be modified with various items, but collection with Silk Touch is currently disabled.",
+    "info.ascendant_spawners.spawner.always_drop": "Spawners may be modified with various items, and will always drop when broken.",
+    "info.ascendant_spawners.capturing": "The capturing enchantment gives monsters a chance to drop their spawn egg.\\n \\nDrop Rate: %s%% per level",
+
+    "config.jade.plugin_ascendant_spawners.spawner": "Apothic Spawners",
+
+    "advancements.ascendant_spawners.spawner.root": "ascendant_spawners Spawners",
+    "advancements.ascendant_spawners.spawner.root.desc": "Spawners can be collected and modified, see JEI for info.",
+    "advancements.ascendant_spawners.spawner": "Apothic Spawners",
+    "advancements.ascendant_spawners.spawner.desc": "Collect a mob spawner using Silk Touch.",
+    "advancements.ascendant_spawners.capturing": "Captured!",
+    "advancements.ascendant_spawners.capturing.desc": "Get a spawn egg from a mob using the Capturing enchantment",
+    "advancements.ascendant_spawners.modifier": "Just a Few Tweaks...",
+    "advancements.ascendant_spawners.modifier.desc": "Use a spawner modifier to change the stats of a spawner.",
+    "advancements.ascendant_spawners.spawncount": "Look at the Size of His Spawner!",
+    "advancements.ascendant_spawners.spawncount.desc": "Raise the spawn count of a spawner to 16",
+    "advancements.ascendant_spawners.maxdelay": "Time-Warped Spawner",
+    "advancements.ascendant_spawners.maxdelay.desc": "Decrease the maximum spawn delay of a spawner to 20",
+    "advancements.ascendant_spawners.mindelay": "I Am The Fast",
+    "advancements.ascendant_spawners.mindelay.desc": "Decrease the minimum spawn delay of a spawner to 20",
+    "advancements.ascendant_spawners.nearbyents": "Creating a Horde",
+    "advancements.ascendant_spawners.nearbyents.desc": "Raise the max nearby entities of a spawner to 32",
+    "advancements.ascendant_spawners.playerrange": "Far from the Fight",
+    "advancements.ascendant_spawners.playerrange.desc": "Raise the player activation range of a spawner to 48",
+    "advancements.ascendant_spawners.spawnrange": "Mobs for Miles",
+    "advancements.ascendant_spawners.spawnrange.desc": "Raise the spawn range of a spawner to 32",
+    "advancements.ascendant_spawners.conditions": "Unchecked Spawning",
+    "advancements.ascendant_spawners.conditions.desc": "Disable spawn conditions for a spawner",
+    "advancements.ascendant_spawners.players": "Factory-Ready",
+    "advancements.ascendant_spawners.players.desc": "Disable the need for nearby players for a spawner",
+    "advancements.ascendant_spawners.redstone": "Adding a Switch",
+    "advancements.ascendant_spawners.redstone.desc": "Enable redstone control for a spawner",
+    "advancements.ascendant_spawners.light": "Who Needs Darkness?",
+    "advancements.ascendant_spawners.light.desc": "Make your spawner work in any light level.",
+    "advancements.ascendant_spawners.noai": "Brain Drain",
+    "advancements.ascendant_spawners.noai.desc": "Disable Mob AI for a spawner.",
+    "advancements.ascendant_spawners.ultimate_spawner": "The Ultimate Spawner",
+    "advancements.ascendant_spawners.ultimate_spawner.desc": "Create a spawner with minimal delays that has redstone control, no AI, ignores spawn conditions, and ignores players.",
+
+    "enchantment.level.0": "0",
+
+    "emi.category.ascendant_spawners.spawner": "Spawner Modification"
+}

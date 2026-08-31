@@ -1,0 +1,11 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:fermented_spider_eye"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:spawn_count",
+		"value": 2,
+		"max": 16
+	}]
+}

@@ -1,0 +1,11 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:piston"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:spawn_range",
+		"value": 2,
+		"max": 32
+	}]
+}

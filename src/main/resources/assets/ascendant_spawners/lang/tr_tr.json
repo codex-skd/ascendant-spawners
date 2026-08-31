@@ -1,0 +1,112 @@
+{
+    "item.ascendant_spawners.spawner": "%s Canavar Çağırıcı",
+
+    "enchantment.ascendant_spawners.capturing": "Yakalama",
+    "enchantment.ascendant_spawners.capturing.desc": "Canavarların çağırma yumurtalarını düşürme şansı olur.",
+
+    "misc.ascendant_spawners.concat": "%s %s",
+    "misc.ascendant_spawners.value_concat": "%s: %s",
+    "misc.ascendant_spawners.min_value": "En Düşük Değer: %s",
+    "misc.ascendant_spawners.max_value": "En Yüksek Değer: %s",
+    "misc.ascendant_spawners.mainhand": "Ana Elinde Tutulur",
+    "misc.ascendant_spawners.offhand": "Diğer Elinde Tutulur",
+    "misc.ascendant_spawners.not_consumed": "Bu eşya tüketilmez",
+    "misc.ascendant_spawners.rclick_spawner": "Canavar Çağırıcısına Sağ Tıkla",
+    "misc.ascendant_spawners.entity": "Varlık",
+    "misc.ascendant_spawners.shift_stats": "İstatistikler için Shift'e basılı tut",
+    "misc.ascendant_spawners.ctrl_stats": "İstatistikler için Ctrl'ye basılı tut",
+    "misc.ascendant_spawners.banned": "Canavar Çağırıcısında kullanılamaz",
+	
+    "stat.ascendant_spawners.min_delay": "En Düşük Doğma Gecikmesi",
+    "stat.ascendant_spawners.min_delay.desc": "Doğmalar arasındaki en düşük tik sayısı",
+
+    "stat.ascendant_spawners.max_delay": "En Yüksek Doğma Gecikmesi",
+    "stat.ascendant_spawners.max_delay.desc": "Doğmalar arasındaki en yüksek tik sayısı",
+
+    "stat.ascendant_spawners.spawn_count": "Doğma Sayısı",
+    "stat.ascendant_spawners.spawn_count.desc": "Aynı anda doğan varlıkların sayısı",
+
+    "stat.ascendant_spawners.max_nearby_entities": "En Fazla Varlık",
+    "stat.ascendant_spawners.max_nearby_entities.desc": "Yakındaki izin verilen toplam varlık sayısı",
+
+    "stat.ascendant_spawners.req_player_range": "Etkinleştirme Menzili",
+    "stat.ascendant_spawners.req_player_range.desc": "Bir oyuncunun doğma durmadan önce ne kadar uzakta olabileceği",
+	
+    "stat.ascendant_spawners.spawn_range": "Doğma Menzili",
+    "stat.ascendant_spawners.spawn_range.desc": "Canavarların doğabileceği yarıçap (blok cinsinden)",
+
+    "stat.ascendant_spawners.ignore_players": "Oyuncuları Yoksayar",
+    "stat.ascendant_spawners.ignore_players.desc": "Canavar Çağırıcı, yakındaki bir oyuncuya ihtiyaç duymaz",
+
+    "stat.ascendant_spawners.ignore_conditions": "Koşulları Yoksayar",
+    "stat.ascendant_spawners.ignore_conditions.desc": "Canavar Çağırıcı, doğma koşullarını yoksayar",
+
+    "stat.ascendant_spawners.redstone_control": "Redstone Kontrolü",
+    "stat.ascendant_spawners.redstone_control.desc": "Canavar Çağırıcının etkinleşmesi için redstone'a ihtiyacı vardır",
+
+    "stat.ascendant_spawners.ignore_light": "Işığı Yoksayar",
+    "stat.ascendant_spawners.ignore_light.desc": "Canavar Çağırıcı, ışık seviyelerini yoksayar",
+	
+    "stat.ascendant_spawners.no_ai": "YZ Yok",
+    "stat.ascendant_spawners.no_ai.desc": "Doğan varlıklar yapay zeka kullanmaz",
+
+    "stat.ascendant_spawners.silent": "Sessiz",
+    "stat.ascendant_spawners.silent.desc": "Doğan varlıklar hiç ses çıkarmaz",
+
+    "stat.ascendant_spawners.youthful": "Genç",
+    "stat.ascendant_spawners.youthful.desc": "Canavar Çağırıcı, mümkün olduğunda her zaman bebek varlık üretir",
+
+    "stat.ascendant_spawners.initial_health": "Başlangıç Sağlığı",
+    "stat.ascendant_spawners.initial_health.desc": "Doğan canavarların başlangıç sağlık yüzdesi",
+
+    "stat.ascendant_spawners.burning": "Yanma",
+    "stat.ascendant_spawners.burning.desc": "Üretilen canavarlar yanar durumda olur",
+
+    "stat.ascendant_spawners.echoing": "Yankılanma",
+    "stat.ascendant_spawners.echoing.desc": "Üretilen canavarlar ekstra ganimet düşürür, seviyeye bağlı olarak artar",
+	
+    "title.ascendant_spawners.spawner": "Canavar Çağırıcı Modifikasyonu",
+    "info.ascendant_spawners.spawner": "Canavar Çağırıcıları çeşitli eşyalarla değiştirilebilir, %s kullanılarak toplanabilir.",
+    "info.ascendant_spawners.spawner.no_silk": "Canavar Çağırıcıları çeşitli eşyalarla değiştirilebilir, ancak şu anda İpeksi Dokunuş ile toplama devre dışı.",
+    "info.ascendant_spawners.spawner.always_drop": "Canavar Çağırıcıları çeşitli eşyalarla değiştirilebilir, kırıldığında her zaman düşer.",
+    "info.ascendant_spawners.capturing": "Yakalama büyüsü, canavarlara çağırma yumurtalarını düşürme şansı verir.\\n \\nDüşme Oranı: Seviye başına %s%%",
+	
+    "config.jade.plugin_ascendant_spawners.spawner": "Apothic Canavar Çağırıcıları",
+
+    "advancements.ascendant_spawners.spawner.root": "ascendant_spawners Canavar Çağırıcıları",
+    "advancements.ascendant_spawners.spawner.root.desc": "Canavar Çağırıcıları toplanabilir ve değiştirilebilir, bilgi için JEI'ye bak.",
+    "advancements.ascendant_spawners.spawner": "Apothic Canavar Çağırıcıları",
+    "advancements.ascendant_spawners.spawner.desc": "Bir canavar çağırıcıyı İpeksi Dokunuş ile topla.",
+    "advancements.ascendant_spawners.capturing": "Yakalandı!",
+    "advancements.ascendant_spawners.capturing.desc": "Yakalama büyüsünü kullanarak bir yaratığın çağırma yumurtasını elde et.",
+    "advancements.ascendant_spawners.modifier": "Birkaç Küçük Ayar...",
+    "advancements.ascendant_spawners.modifier.desc": "Bir canavar çağırıcının istatistiklerini değiştirmek için bir canavar çağırıcı modifikasyonu kullan.",
+    "advancements.ascendant_spawners.spawncount": "Canavar Çağırıcısının Boyutuna Bak!",
+    "advancements.ascendant_spawners.spawncount.desc": "Bir canavar çağırıcının doğma sayısını 16'ya yükselt.",
+    "advancements.ascendant_spawners.maxdelay": "Zamanı Büken Canavar Çağırıcı",
+    "advancements.ascendant_spawners.maxdelay.desc": "Bir canavar çağırıcının en fazla doğma gecikmesini 20'ye düşür.",
+    "advancements.ascendant_spawners.mindelay": "Ben Hızlıyım",
+    "advancements.ascendant_spawners.mindelay.desc": "Bir canavar çağırıcının en düşük doğma gecikmesini 20'ye düşür.",
+    "advancements.ascendant_spawners.nearbyents": "Bir Sürü Yaratık Oluşturmak",
+    "advancements.ascendant_spawners.nearbyents.desc": "Bir canavar çağırıcının en fazla yakındaki varlık sayısını 32'ye yükselt.",
+    "advancements.ascendant_spawners.playerrange": "Savaştan Uzak",
+    "advancements.ascendant_spawners.playerrange.desc": "Bir canavar çağırıcının oyuncu etkinleştirme menzilini 48'e yükselt.",
+    "advancements.ascendant_spawners.spawnrange": "Kilometrelerce Yaratık",
+    "advancements.ascendant_spawners.spawnrange.desc": "Bir canavar çağırıcının doğma menzilini 32'ye yükselt.",
+    "advancements.ascendant_spawners.conditions": "Denetimsiz Doğma",
+    "advancements.ascendant_spawners.conditions.desc": "Bir canavar çağırıcının için doğma koşullarını devre dışı bırak.",
+    "advancements.ascendant_spawners.players": "Fabrika Hazır",
+    "advancements.ascendant_spawners.players.desc": "Bir canavar çağırıcı için yakın oyuncu gereksinimini devre dışı bırak.",
+    "advancements.ascendant_spawners.redstone": "Bir Anahtar Eklemek",
+    "advancements.ascendant_spawners.redstone.desc": "Bir canavar çağırıcı için redstone kontrolünü etkinleştir.",
+    "advancements.ascendant_spawners.light": "Karanlığa Kim İhtiyaç Duyar?",
+    "advancements.ascendant_spawners.light.desc": "Canavar Çağırıcının herhangi bir ışık seviyesinde çalışmasını sağlay.",
+    "advancements.ascendant_spawners.noai": "Beyin Sisi",
+    "advancements.ascendant_spawners.noai.desc": "Bir canavar çağırıcı için Yaratık YZ'sını devre dışı bırak.",
+    "advancements.ascendant_spawners.ultimate_spawner": "Nihai Canavar Çağırıcı",
+    "advancements.ascendant_spawners.ultimate_spawner.desc": "Redstone kontrolü, YZ devre dışı, doğma koşullarını ve oyuncuları görmezden gelen, en düşük gecikmeye sahip bir canavar çağırıcı oluştur.",
+
+    "enchantment.level.0": "0",
+
+    "emi.category.ascendant_spawners.spawner": "Canavar Çağırıcı Modifikasyonu"
+}

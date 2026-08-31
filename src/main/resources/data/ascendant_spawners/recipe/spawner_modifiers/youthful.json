@@ -1,0 +1,10 @@
+{
+	"type": "ascendant_spawners:spawner_modifier",
+	"mainhand": {
+		"item": "minecraft:turtle_egg"
+	},
+	"stat_changes": [{
+		"type": "ascendant_spawners:youthful",
+		"value": true
+	}]
+}
